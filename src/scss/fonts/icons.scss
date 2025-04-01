@@ -1,0 +1,77 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-phone:before {
+	content: "\e90b";
+}
+._icon-arrow-calendar:before {
+	content: "\e900";
+}
+._icon-arrow-down:before {
+	content: "\e901";
+}
+._icon-arrow-more:before {
+	content: "\e902";
+}
+._icon-arrow-next:before {
+	content: "\e903";
+}
+._icon-arrow-next-2:before {
+	content: "\e904";
+}
+._icon-arrow-paging:before {
+	content: "\e905";
+}
+._icon-location:before {
+	content: "\e906";
+}
+._icon-med-croses:before {
+	content: "\e907";
+}
+._icon-minus:before {
+	content: "\e908";
+}
+._icon-minus-thin:before {
+	content: "\e909";
+}
+._icon-ok-circle:before {
+	content: "\e90a";
+}
+._icon-planet:before {
+	content: "\e90c";
+}
+._icon-play:before {
+	content: "\e90d";
+}
+._icon-plus:before {
+	content: "\e90e";
+}
+._icon-plus-thin:before {
+	content: "\e90f";
+}
+._icon-quotes:before {
+	content: "\e910";
+}
+._icon-star:before {
+	content: "\e911";
+}
+._icon-time:before {
+	content: "\e912";
+}
+._icon-time-sm:before {
+	content: "\e913";
+}

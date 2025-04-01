@@ -1,0 +1,52 @@
+.numbers {
+	// .numbers__container
+	&__container {
+	}
+
+	// .numbers__list
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: toRem(60);
+		flex-wrap: wrap;
+
+		padding: toRem(40);
+	}
+
+	// .numbers__item
+	&__item {
+		min-width: toRem(195);
+	}
+
+	// .numbers__num
+	&__num {
+		position: relative;
+
+		display: inline-flex;
+
+		color: var(--green);
+		font-family: "Manrope", system-ui, sans-serif;
+		font-size: toRem(48);
+		font-weight: 800;
+		line-height: 108.333333%; /* 52/48 */
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(112.23deg, rgb(255, 255, 255, 0), rgb(255, 255, 255, 0.85));
+		}
+
+		& span {
+			opacity: 0;
+		}
+	}
+
+	// .numbers__txt
+	&__txt {
+		color: var(--text-grey-2);
+		font-size: toRem(14);
+		font-weight: 600;
+		line-height: 171.428571%; /* 24/14 */
+	}
+}
