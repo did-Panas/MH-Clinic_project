@@ -7,10 +7,15 @@
 	&__list {
 		display: flex;
 		justify-content: center;
-		gap: toRem(60);
+		@include adaptiveValue("column-gap", 60, 15, 0, 1200, 992);
+		row-gap: toRem(45);
 		flex-wrap: wrap;
 
-		padding: toRem(40);
+		@include adaptiveValue("padding", 40, 0, 0, 1200, 992);
+
+		@media (max-width: em(1199)) {
+			justify-content: space-evenly;
+		}
 	}
 
 	// .numbers__item
@@ -26,7 +31,8 @@
 
 		color: var(--green);
 		font-family: "Manrope", system-ui, sans-serif;
-		font-size: toRem(48);
+		@include adaptiveValue("font-size", 48, 35, 0, 1200, 992);
+
 		font-weight: 800;
 		line-height: 108.333333%; /* 52/48 */
 
@@ -45,7 +51,7 @@
 	// .numbers__txt
 	&__txt {
 		color: var(--text-grey-2);
-		font-size: toRem(14);
+		@include adaptiveValue("font-size", 14, 11, 0, 1200, 992);
 		font-weight: 600;
 		line-height: 171.428571%; /* 24/14 */
 	}
