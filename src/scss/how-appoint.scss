@@ -6,17 +6,9 @@
 	// .how-appoint__title
 	&__title {
 		max-width: 54.714286%; /* 766/1400 */
-		margin: 0 auto;
-		@include adaptiveValue("margin-bottom", 50, 40, 0, 1200, 768);
-
-		text-align: center;
 
 		@media (max-width: $mobile) {
 			max-width: toRem(410);
-		}
-
-		& h2 {
-			@include adaptiveValue("margin-bottom", 20, 14, 0, 1200, 768);
 		}
 	}
 

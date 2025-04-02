@@ -5,7 +5,14 @@
 	letter-spacing: 2%;
 }
 
+.title-h2 {
+	margin: 0 auto;
+	@include adaptiveValue("margin-bottom", 50, 40, 0, 1200, 768);
+}
+
 .h2 {
+	@include adaptiveValue("margin-bottom", 20, 14, 0, 1200, 768);
+
 	@include adaptiveValue("font-size", 40, 28, 0, 1200, 768);
 	font-weight: 700;
 	line-height: 130%; /* 52/40 */
@@ -13,7 +20,7 @@
 
 .h1,
 .h2 {
-	color: --text-dark-2;
+	color: var(--text-dark-2);
 }
 
 .h2-subtitle {
@@ -21,4 +28,9 @@
 	@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
 	font-weight: 600;
 	line-height: 150%; /* 24/16 */
+}
+
+h2,
+.h2-subtitle {
+	text-align: center;
 }
