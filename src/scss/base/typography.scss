@@ -30,7 +30,16 @@
 	line-height: 150%; /* 24/16 */
 }
 
-h2,
+.h2,
 .h2-subtitle {
 	text-align: center;
+}
+
+.h2-sm {
+	font-size: toRem(20);
+	font-weight: 600;
+
+	& span {
+		color: var(--green-3);
+	}
 }
