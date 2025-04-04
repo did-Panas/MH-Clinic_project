@@ -1,6 +1,10 @@
 .categories {
 	// .categories__title
 	&__title {
+		margin-bottom: toRem(26);
+
+		font-size: toRem(20);
+		font-weight: 600;
 	}
 
 	// .categories__list
@@ -9,9 +13,30 @@
 
 	// .categories__item
 	&__item {
+		padding: toRem(13) toRem(0) toRem(10);
+
+		&:not(:last-child) {
+			border-bottom: 1px dashed var(--green-5);
+		}
 	}
 
 	// .categories__link
 	&__link {
+		display: flex;
+		justify-content: space-between;
+
+		padding: toRem(0) toRem(1) toRem(0);
+
+		font-size: toRem(15);
+		font-weight: 500;
+		line-height: 150%;
+
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--text-orange);
+			}
+		}
 	}
 }
