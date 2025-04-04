@@ -1,0 +1,229 @@
+.contact-us {
+	@media (max-width: $tablet) {
+		background-color: var(--green);
+	}
+	// .contact-us__container
+	&__container {
+	}
+
+	// .contact-us__wrapper
+	&__wrapper {
+		display: grid;
+		grid-template-columns: minmax(49.140893%, 572px) minmax(38.917526%, 453px);
+		justify-content: space-between;
+		grid-gap: toRem(30);
+
+		@include adaptiveValue("padding-top", 60, 45, 0, 992, 768);
+		@include adaptiveValue("padding-bottom", 50, 40, 0, 992, 768);
+		@include adaptiveValue("padding-right", 118, 15, 2, 1300, 992);
+		@include adaptiveValue("padding-left", 118, 15, 2, 1300, 992);
+
+		background-color: var(--green);
+		color: var(--white);
+
+		@media (min-width: $tablet) {
+			border-radius: 10px;
+		}
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $mobile) {
+			grid-gap: toRem(20);
+		}
+
+		@media (max-width: em(669.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .contact-us__form
+	&__form {
+	}
+
+	// .contact-us__info
+	&__info {
+		display: grid;
+		grid-template: auto auto 1fr / 1fr 1fr;
+		grid-column-gap: toRem(20);
+
+		margin-top: toRem(32);
+
+		@media (max-width: $mobile) {
+			grid-column-gap: toRem(15);
+		}
+	}
+}
+
+.form-contact {
+	// .form-contact__title
+	&__title {
+		margin-bottom: toRem(28);
+
+		@include adaptiveValue("font-size", 52, 37, 0, 1200, 768);
+		line-height: 121.153846%; /* 63/52 */
+	}
+
+	// .form-contact__input
+	&__input {
+		position: relative;
+
+		@include adaptiveValue("margin-bottom", 31, 25, 0, 991, 768);
+
+		& input {
+			padding: toRem(9) toRem(14);
+
+			&._form-error {
+				background-color: rgba(175, 43, 43, 0.15);
+			}
+		}
+
+		& .form__error {
+			position: absolute;
+			bottom: toRem(-25);
+			left: 0;
+
+			padding: toRem(5) toRem(8);
+
+			background-color: var(--white_12);
+			border-radius: toRem(5);
+			font-size: toRem(12);
+		}
+	}
+
+	// .form-contact__txt-area
+	&__txt-area {
+		@include adaptiveValue("margin-bottom", 33, 27, 0, 991, 768);
+
+		& textarea {
+			height: toRem(140);
+			padding: toRem(8) toRem(11);
+		}
+	}
+
+	& input,
+	& textarea {
+		color: var(--white);
+		background-color: transparent;
+		border: 1px solid var(--white);
+		border-radius: toRem(7);
+
+		&::placeholder {
+			color: var(--white);
+		}
+
+		&:focus {
+			outline: none;
+			-webkit-box-shadow: inset 0px 0px 5px 1px #046f67;
+			-moz-box-shadow: inset 0px 0px 5px 1px #046f67;
+			box-shadow: inset 0px 0px 5px 1px #046f67;
+		}
+	}
+
+	// .form-contact__checkbox
+	&__checkbox {
+		margin-bottom: toRem(24);
+
+		@media (max-width: $tablet) {
+			margin-bottom: toRem(35);
+		}
+
+		& label {
+			font-size: toRem(13);
+		}
+	}
+
+	& button {
+		background-color: var(--white);
+		outline: none;
+
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.info-contact {
+	// .info-contact__txt
+	&__txt {
+		grid-column: 1 / -1;
+
+		margin-bottom: toRem(20);
+
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		line-height: 150%;
+	}
+
+	// .info-contact__map
+	&__map {
+		grid-column: 1 / -1;
+
+		display: inline-flex;
+
+		aspect-ratio: 453 / 216;
+		width: 100%;
+		margin-bottom: toRem(30);
+
+		border-radius: 7px;
+		overflow: hidden;
+
+		@media (max-width: $mobileSmall) {
+			aspect-ratio: 1 / 0.75;
+		}
+
+		& iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// .info-contact__location
+	&__location {
+		&::before {
+			content: "\e906";
+
+			display: inline-block;
+
+			margin-bottom: toRem(6);
+
+			font-family: "icons";
+			font-size: toRem(25);
+			font-weight: 400;
+		}
+	}
+
+	// .info-contact__work-time
+	&__work-time {
+		justify-self: end;
+
+		&::before {
+			content: "\e912";
+		}
+	}
+
+	&__location,
+	&__work-time {
+		@media (min-width: $tablet) {
+			font-weight: 500;
+		}
+
+		@media (max-width: em(669.98)) {
+			justify-self: center;
+		}
+
+		&::before {
+			display: inline-block;
+
+			margin-bottom: toRem(6);
+
+			font-family: "icons";
+			font-size: toRem(25);
+			@include adaptiveValue("font-size", 25, 18, 0, 1400, 768);
+			font-weight: 400;
+		}
+
+		& p {
+			@include adaptiveValue("font-size", 16, 11, 0, 1400, 768);
+			line-height: 125%;
+		}
+	}
+}

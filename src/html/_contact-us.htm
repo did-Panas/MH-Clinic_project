@@ -1,64 +1,71 @@
 <div class="contact-us">
 	<div class="contact-us__container">
+		<div class="contact-us__wrapper">
 
-		<form action="#" class="contact-us__form form-contact">
+			<form data-dev action="#" class="contact-us__form form-contact">
 
-			<div class="form-contact__title">Contact Us</div>
+				<div class="form-contact__title">Contact Us</div>
 
-			<input data-required data-validate autocomplete="off" type="text" name="form[name]" data-error="empty field" placeholder="Name" class="input">
+				<div class="form-contact__input">
+					<input data-required autocomplete="off" type="text" name="form[name]" data-error="empty field" placeholder="Name" class="input">
+				</div>
 
-			<input data-required="email" data-validate autocomplete="off" type="text" name="form[mail]" data-error="incorrect email address" placeholder="Email" class="input">
+				<div class="form-contact__input">
+					<input data-required="email" data-validate autocomplete="off" type="text" name="form[mail]" data-error="incorrect email address" placeholder="Email" class="input">
+				</div>
 
-			<textarea class="input" autocomplete="off" name="form[proj-scope]" placeholder="Message"></textarea>
+				<div class="form-contact__txt-area">
+					<textarea class="input" autocomplete="off" name="form[proj-scope]" placeholder="Message"></textarea>
+				</div>
 
-			<input id="checkbox" type="checkbox" name="form[reveive-newsletter]">
-			<label for="checkbox">I would like to receive the newsletter.</label>
+				<div class="form-contact__checkbox">
+					<div class="checkbox">
+						<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[reveive-newsletter]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">I would like to receive the newsletter.</span></label>
+					</div>
+				</div>
 
-			<button type="submit" class="button button--outline">Submit</button>
+				<button type="submit" class="button button--outline">Submit</button>
 
-		</form>
+			</form>
 
-		<div class="contact-us__info info-contact">
+			<div class="contact-us__info info-contact">
 
-			<div class="info-contact__txt">
-				Have questions or want to book an appointment? Contact us by phone, email, or using the form below. We're here to support your health and well-being. Reach out today!
-			</div>
+				<div class="info-contact__txt">
+					Have questions or want to book an appointment? Contact us by phone, email, or using the form below. We're here to support your health and well-being. Reach out today!
+				</div>
 
-			<div class="info-contact__map">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.8868445063013!2d121.04442162568289!3d14.548462878349893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9005c76b8c5%3A0xc2c4f5042d722fa2!2sOne%20Global%20Place!5e0!3m2!1suk!2sua!4v1725915233322!5m2!1suk!2sua"
-					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div>
+				<div class="info-contact__map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1066.8506895060873!2d35.20331208737274!3d31.90551623661526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d2b0e0c56da03%3A0x843d97f0e8b076f9!2zQmVzdCBjbGluaWMgLCDZhdix2YPYsiDYtdit2Kkg2KfZhNiw2YPZiNix2Kk!5e0!3m2!1suk!2sua!4v1743713627237!5m2!1suk!2sua"
+						width="453" height="216" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 
-			<address class="info-contact__location">
-				<p>Ramallah - Al-Manara</p>
-				<p>Roundabout - City Center</p>
-				<p>Building - 5th Floor</p>
-			</address>
+				<address class="info-contact__location">
+					<p>Ramallah - Al-Manara</p>
+					<p>Roundabout - City Center</p>
+					<p>Building - 5th Floor</p>
+				</address>
 
-			<div class="info-contact__work-time">
-				<time datetime="2023-04-15T14:30:00+03:00">15 квітня 2023, 14:30 (за Київським часом)</time>
-			</div>
+				<div class="info-contact__work-time">
 
-			<div class="info-contact__work-time">
+					<p>Mon - Fri:
+						<time datetime="08:00+03:00">8:00am</time> -
+						<time datetime="20:00+03:00">8:00pm</time>
+					</p>
+					<p>Saturday:
+						<time datetime="08:30+03:00">8:30am</time> -
+						<time datetime="18:00+03:00">6:00pm</time>
+					</p>
+					<p>Sunday:
+						<time datetime="09:00+03:00">9:00am</time> -
+						<time datetime="17:00+03:00">5:00pm</time>
+					</p>
 
-				<p>Mon - Fri:
-					<time datetime="08:00+03:00">8:00am</time> -
-					<time datetime="20:00+03:00">8:00pm</time>
-				</p>
-				<p>Saturday:
-					<time datetime="08:30+03:00">8:30am</time> -
-					<time datetime="18:00+03:00">6:00pm</time>
-				</p>
-				<p>Sunday:
-					<time datetime="09:00+03:00">9:00am</time> -
-					<time datetime="17:00+03:00">5:00pm</time>
-				</p>
+				</div>
 
 			</div>
 
 		</div>
-
 	</div>
 </div>
