@@ -1,60 +1,159 @@
-//====================================================================================================
+// ===== HEADER ===================================================
 
-//====================================================================================================
+.header {
+	// .header__container
+	&__container {
+	}
 
-//Burger
+	// .header__row
+	&__row {
+	}
 
-// .icon-menu {
-// 	display: none;
-// 	@media (max-width: $mobile) {
-// 		display: block;
-// 		position: relative;
-// 		width: toRem(30);
-// 		height: toRem(18);
-// 		z-index: 5;
-// 		@media (any-hover: none) {
-// 			cursor: default;
-// 		}
-// 		span,
-// 		&::before,
-// 		&::after {
-// 			content: "";
-// 			transition: all 0.3s ease 0s;
-// 			right: 0;
-// 			position: absolute;
-// 			width: 100%;
-// 			height: toRem(2);
-// 			background-color: #000;
-// 		}
-// 		&::before {
-// 			top: 0;
-// 		}
-// 		&::after {
-// 			bottom: 0;
-// 		}
-// 		span {
-// 			top: calc(50% - toRem(1));
-// 		}
-// 		.menu-open & {
-// 			span {
-// 				width: 0;
-// 			}
-// 			&::before,
-// 			&::after {
-// 			}
-// 			&::before {
-// 				top: calc(50% - toRem(1));
-// 				transform: rotate(-45deg);
-// 			}
-// 			&::after {
-// 				bottom: calc(50% - toRem(1));
-// 				transform: rotate(45deg);
-// 			}
-// 		}
-// 	}
+	// .header__logo
+	&__logo {
+	}
 
-// 	// !!! Віключення виділення кнопки
-// 	&:focus {
-// 		outline: none;
-// 	}
-// }
+	// .header__contacts
+	&__contacts {
+	}
+
+	// .header__location
+	&__location {
+	}
+
+	// .header__work-time
+	&__work-time {
+	}
+
+	// .header__phones
+	&__phones {
+	}
+
+	// .header__phones-list
+	&__phones-list {
+	}
+
+	// .header__socials
+	&__socials {
+	}
+
+	// .header__menu
+	&__menu {
+	}
+
+	// .header__lang
+
+	&__lang {
+	}
+}
+
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+
+	// .menu__body
+	&__body {
+	}
+
+	// .menu__list
+	&__list {
+	}
+
+	// .menu__item
+	&__item {
+		// .menu__item_menu
+		&_menu {
+		}
+	}
+
+	// .menu__link
+	&__link {
+	}
+}
+
+.lang-sel {
+	// .lang-sel__items
+	&__items {
+	}
+
+	// .lang-sel__item
+	&__item {
+	}
+
+	// .lang-sel__icon
+	&__icon {
+	}
+
+	// .lang-sel__arrow
+	&__arrow {
+	}
+
+	// .lang-sel__list
+	&__list {
+	}
+
+	// .lang-sel__link
+	&__link {
+		// .lang-sel__link_curr
+		&_curr {
+		}
+	}
+}
+
+// ===== BURGER - MENU =============================================
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	// !!! Віключення виділення кнопки
+	&:focus {
+		outline: none;
+	}
+}
