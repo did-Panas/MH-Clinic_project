@@ -5,24 +5,22 @@
 		<div class="header__row">
 
 			<!-- LOGO -->
-			<a href="home.html" class="header__logo header__logo-ibg header__logo-ibg--contain">
+			<a href="home.html" class="header__row-item header__logo">
 				<img src="@img/logo@1x.png" srcset="@img/logo@2x.png 2x" alt="Logo">
 			</a>
+			<!-- LOCATION -->
+			<address data-da=".menu__body,1199,1" class="header__row-item header__location">
+				<a href="#" class="header__see-map _icon-location"></a>
+				<a href="#" class="header__address">
+					<p>Ramallah - Al-Manara</p>
+					<p>Roundabout - City Center</p>
+					<p>Building - 5th Floor</p>
+				</a>
+			</address>
+			<!-- WORK-TIME SCHEDULE -->
+			<div data-da=".menu__body,1199,2" class="header__row-item header__work-time _icon-time">
 
-			<!-- HEADER - CONTACTS -->
-			<div class="header__contacts">
-
-				<!-- LOCATION -->
-				<address class="header__location _icon-location">
-					<a href="#">
-						<p>Ramallah - Al-Manara</p>
-						<p>Roundabout - City Center</p>
-						<p>Building - 5th Floor</p>
-					</a>
-				</address>
-				<!-- WORK-TIME SCHEDULE -->
-				<div class="header__work-time _icon-time">
-
+				<div>
 					<p>Mon - Fri:
 						<time datetime="08:00+03:00">8:00am</time> -
 						<time datetime="20:00+03:00">8:00pm</time>
@@ -35,21 +33,20 @@
 						<time datetime="09:00+03:00">9:00am</time> -
 						<time datetime="17:00+03:00">5:00pm</time>
 					</p>
-
-				</div>
-				<!-- CONTACT-PHONES -->
-				<div class="header__phones _icon-phone">
-					<ul class="header__phones-list">
-						<li><a href="#">059-807-0808</a></li>
-						<li><a href="#">052-680-0824</a></li>
-						<li><a href="#">02-2921935</a></li>
-					</ul>
 				</div>
 
 			</div>
-
+			<!-- CONTACT-PHONES -->
+			<div data-da=".menu__body,1199,3" class="header__row-item header__phones">
+				<a href="#" class="header__call _icon-phone"></a>
+				<ul class="header__phones-list">
+					<li><a href="#">059-807-0808</a></li>
+					<li><a href="#">052-680-0824</a></li>
+					<li><a href="#">02-2921935</a></li>
+				</ul>
+			</div>
 			<!-- SOCIALS ICONS -->
-			<ul class="header__socials">
+			<ul class="header__row-item header__socials">
 				<li>
 					<a href="$"><img src="@img/socials/facebook.svg" alt="Socials Logo"></a>
 				</li>
@@ -75,13 +72,9 @@
 					<ul class="menu__list">
 						<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
 						<li class="menu__item"><a href="#" class="menu__link">About Us</a></li>
-						<li class="menu__item menu__item_menu">Treatments
-							<!-- <div class="menu__btn">Treatments</div>
-							<span class="menu__arrow arrow">
-								<svg>
-									<use xlink:href="@img/arrow-down.svg"></use>
-								</svg>
-							</span>
+						<li class="menu__item menu__item_menu">
+							<div class="menu__btn">Treatments</div>
+							<span class="menu__arrow arrow _icon-arrow-down"></span>
 							<ul class="sub-menu__list">
 								<li class="sub-menu__item">
 									<a href="#" class="sub-menu__link">Treatment with Medications</a>
@@ -98,7 +91,7 @@
 								<li class="sub-menu__item">
 									<a href="#" class="sub-menu__link">Increase Penis Length</a>
 								</li>
-							</ul> -->
+							</ul>
 						</li>
 						<li class="menu__item"><a href="#" class="menu__link">Booking Now</a></li>
 						<li class="menu__item"><a href="#" class="menu__link">Blogs</a></li>
@@ -108,19 +101,23 @@
 				</nav>
 			</div>
 
+			<!-- CALL (for mobile screens) -->
+			<a href="#" class="header__row-item header__call-mob _icon-phone"></a>
+
 			<!-- LANGUAGE SELECTOR -->
 			<div class="header__lang lang-sel">
-				<div data-spollers data-spollers-speed="350" class="lang-sel__items">
-					<div class="lang-sel__item">
-						<div class="lang-sel__icon _icon-planet"></div>
-						<button type="button" data-spoller data-spoller-close class="lang-sel__arrow _icon-arrow-down"></button>
+				<div data-spollers data-spollers-speed="350" class="lang-sel__items _icon-planet">
+					<details class="lang-sel__item">
+						<summary type="button" data-spoller data-spoller-close class="lang-sel__btn _icon-arrow-down"></summary>
 						<ul class="lang-sel__list">
 							<li><a href="#" class="lang-sel__link lang-sel__link_curr">EN</a></li>
 							<li><a href="#" class="lang-sel__link">HE</a></li>
 						</ul>
-					</div>
+					</details>
 				</div>
 			</div>
+
+
 
 		</div>
 

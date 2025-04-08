@@ -64,6 +64,14 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
+
+// recently added
 address {
 	font-style: normal;
+}
+
+img,
+video,
+canvas {
+	view-transition-name: none;
 }
