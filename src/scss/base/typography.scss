@@ -43,3 +43,11 @@
 		color: var(--green-3);
 	}
 }
+
+.footer-subtitle {
+	margin-bottom: toRem(20);
+
+	color: var(--green-2);
+	font-weight: 700;
+	line-height: 150%; /* 24/16 */
+}

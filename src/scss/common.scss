@@ -1,1 +1,100 @@
-// Заголовки, загальні БЕМ блоки та інше...
+// ----- Socials -----
+.socials {
+	display: flex;
+	justify-content: space-between;
+	column-gap: toRem(21);
+
+	& img {
+		height: toRem(24);
+
+		@media (max-width: $mobileSmall) {
+			height: toRem(18);
+		}
+	}
+}
+
+// ----- Logo -----
+
+.logo {
+	display: flex;
+	align-items: center;
+
+	& img {
+		aspect-ratio: 150 / 64;
+		width: toRem(80);
+		@include adaptiveValue("width", 150, 105, 2, 1400, 992);
+	}
+}
+
+// ----- Location, Work-Time, Phones -----
+.location {
+	& p {
+		line-height: 120%;
+	}
+
+	&__see-map {
+	}
+
+	&__address {
+		@media (any-hover: hover) {
+			&:hover {
+				& p {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.work-time {
+	& p {
+		color: var(--text-grey);
+		line-height: 120%;
+
+		& time {
+			color: initial;
+			font-weight: 500;
+		}
+	}
+}
+
+.phones {
+	&__call {
+	}
+
+	& li {
+		@media (any-hover: hover) {
+			&:hover {
+				& a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	& a {
+		line-height: 120%;
+	}
+}
+
+.location,
+.work-time,
+.phones {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("column-gap", 17, 12, 0, 1400, 992);
+
+	& p,
+	& a {
+		@include adaptiveValue("font-size", 16, 14, 0, 1400, 1200);
+		white-space: nowrap;
+	}
+
+	& ._icon-location:before,
+	&._icon-time:before,
+	& ._icon-phone:before {
+		color: var(--green-2);
+		font-size: toRem(24);
+		@include adaptiveValue("font-size", 21, 18, 2, 1400, 1200);
+	}
+}

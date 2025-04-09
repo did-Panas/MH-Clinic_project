@@ -104,74 +104,27 @@
 
 	// .header__logo
 	&__logo {
-		display: flex;
-		align-items: center;
-
-		& img {
-			aspect-ratio: 150 / 64;
-			width: toRem(80);
-			@include adaptiveValue("width", 150, 105, 2, 1400, 992);
-		}
 	}
 
 	// .header__location
 	&__location {
-		& p {
-			line-height: 120%;
-		}
-	}
-
-	// .header__see-map
-	&__see-map {
-	}
-
-	// .header__address
-	&__address {
-		@media (any-hover: hover) {
-			&:hover {
-				& p {
-					text-decoration: underline;
-				}
-			}
-		}
 	}
 
 	// .header__work-time
 	&__work-time {
-		& p {
-			color: var(--text-grey);
-			line-height: 120%;
-
-			& time {
-				color: initial;
-				font-weight: 500;
-
-				@media (max-width: em(1199.98)) {
-					color: var(--white);
-				}
+		&.work-time time {
+			@media (max-width: em(1199.98)) {
+				color: var(--white);
 			}
 		}
 	}
 
 	// .header__phones
 	&__phones {
-		& li {
-			@media (any-hover: hover) {
-				&:hover {
-					& a {
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-
-		& a {
-			line-height: 120%;
-		}
 	}
 
 	// .header__call
-	&__call {
+	& .phones__call {
 		@include adaptiveValue("margin-right", 10, 0, 0, 1400, 992);
 	}
 
@@ -182,10 +135,6 @@
 	&__location,
 	&__work-time,
 	&__phones {
-		display: flex;
-		align-items: center;
-		@include adaptiveValue("column-gap", 17, 12, 0, 1400, 992);
-
 		@media (max-width: $mobile) {
 			flex-direction: column;
 			gap: toRem(20);
@@ -193,9 +142,6 @@
 
 		& p,
 		& a {
-			@include adaptiveValue("font-size", 16, 14, 0, 1400, 1200);
-			white-space: nowrap;
-
 			@media (max-width: em(1199.98)) {
 				color: var(--white);
 			}
@@ -205,10 +151,6 @@
 	& ._icon-location:before,
 	& ._icon-time:before,
 	& ._icon-phone:before {
-		color: var(--green-2);
-		font-size: toRem(24);
-		@include adaptiveValue("font-size", 21, 18, 2, 1400, 1200);
-
 		@media (max-width: em(1199.98)) {
 			color: var(--white);
 		}
@@ -220,21 +162,10 @@
 
 	// .header__socials
 	&__socials {
-		display: flex;
-		justify-content: space-between;
-		column-gap: toRem(21);
-
-		& img {
-			height: toRem(24);
-
-			@media (max-width: $mobileSmall) {
-				height: toRem(18);
-			}
-		}
 	}
 
-	&__see-map,
-	&__call,
+	& .location__see-map,
+	& .phones__call,
 	&__socials img {
 		transform: scale(1);
 		transition: transform 0.3s linear 0s;
