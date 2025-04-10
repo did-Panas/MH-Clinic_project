@@ -1,8 +1,8 @@
 .h1 {
 	@include adaptiveValue("font-size", 60, 42, 0, 1200, 768);
 	font-weight: 800;
-	line-height: 140%;
-	letter-spacing: 2%;
+	line-height: 113%;
+	letter-spacing: 0.015em;
 }
 
 .title-h2 {

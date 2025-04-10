@@ -1,7 +1,7 @@
 // ===== HEADER ===================================================
 
 .header {
-	margin-top: toRem(21);
+	margin: toRem(21) toRem(0) toRem(20);
 
 	// .header__container
 	&__container {

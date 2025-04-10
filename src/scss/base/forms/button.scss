@@ -6,12 +6,17 @@
 	text-align: center;
 	justify-content: center;
 
-	font-size: toRem(18);
+	@include adaptiveValue("font-size", 18, 14, 0, 1200, 768);
 	font-weight: 600;
 	line-height: 111.111111%; /* 20/18 */
 	text-transform: uppercase;
 	outline: 5px solid rgba(4, 111, 103, 0.2);
 	border-radius: toRem(2);
+
+	@media (max-width: $tablet) {
+		font-weight: 500;
+		outline-width: toRem(3);
+	}
 
 	&--fw {
 		width: 100%;
@@ -48,7 +53,10 @@
 
 	&--green,
 	&--outline {
-		padding: toRem(16) toRem(24);
+		@include adaptiveValue("padding-top", 16, 12, 0, 1200, 768);
+		@include adaptiveValue("padding-right", 24, 18, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 16, 12, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 24, 18, 0, 1200, 768);
 	}
 
 	&--sm {
