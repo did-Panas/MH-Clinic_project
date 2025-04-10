@@ -3,7 +3,7 @@
 	&__list {
 		display: flex;
 		justify-content: center;
-		@include adaptiveValue("column-gap", 60, 15, 0, 1200, 992);
+		@include adaptiveValue("column-gap", 70, 15, 0, 1200, 992);
 		row-gap: toRem(45);
 		flex-wrap: wrap;
 

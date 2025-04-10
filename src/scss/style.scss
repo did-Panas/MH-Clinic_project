@@ -173,5 +173,11 @@ body {
 .home-page {
 	// .home-page__hero
 	&__hero {
+		margin-bottom: toRem(50);
+	}
+
+	// .home-page__numbers
+	&__numbers {
+		margin-left: toRem(40);
 	}
 }
