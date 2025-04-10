@@ -48,6 +48,7 @@
 	margin-bottom: toRem(20);
 
 	color: var(--green-2);
+	@include adaptiveValue("font-size", 16, 14, 0, 1400, 992);
 	font-weight: 700;
 	line-height: 150%; /* 24/16 */
 }

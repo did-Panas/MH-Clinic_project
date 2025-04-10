@@ -94,7 +94,5 @@
 	&._icon-time:before,
 	& ._icon-phone:before {
 		color: var(--green-2);
-		font-size: toRem(24);
-		@include adaptiveValue("font-size", 21, 18, 2, 1400, 1200);
 	}
 }

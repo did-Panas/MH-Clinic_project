@@ -151,6 +151,9 @@
 	& ._icon-location:before,
 	& ._icon-time:before,
 	& ._icon-phone:before {
+		font-size: toRem(24);
+		@include adaptiveValue("font-size", 21, 18, 2, 1400, 1200);
+
 		@media (max-width: em(1199.98)) {
 			color: var(--white);
 		}
