@@ -5,22 +5,19 @@
 	letter-spacing: 0.015em;
 }
 
-.title-h2 {
-	margin: 0 auto;
-	@include adaptiveValue("margin-bottom", 50, 40, 0, 1200, 768);
-}
-
 .h2 {
-	@include adaptiveValue("margin-bottom", 20, 14, 0, 1200, 768);
-
 	@include adaptiveValue("font-size", 40, 28, 0, 1200, 768);
 	font-weight: 700;
 	line-height: 130%; /* 52/40 */
 }
 
-.h1,
-.h2 {
-	color: var(--text-dark-2);
+.h2-center-mb50 {
+	margin: 0 auto;
+	@include adaptiveValue("margin-bottom", 50, 40, 0, 1200, 768);
+}
+
+.h2-mb20 {
+	@include adaptiveValue("margin-bottom", 20, 14, 0, 1200, 768);
 }
 
 .h2-subtitle {

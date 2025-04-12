@@ -9,7 +9,8 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 
-			<div class="home-page__hero hero-home">
+			<!-- Hero -->
+			<section class="home-page__hero hero-home">
 				<div class="hero-home__container">
 					<div class="hero-home__wrapper">
 
@@ -40,11 +41,111 @@
 
 					</div>
 				</div>
-			</div>
-
-			<div class="home-page__numbers">
+			</section>
+			<!-- Numbers -->
+			<section class="home-page__numbers">
 				@@include('html/_numbers.htm',{})
-			</div>
+			</section>
+
+
+			<!-- Experiences - Section -->
+			<section class="home-page__experiences experiences">
+				<div class="experiences__container">
+
+					<!-- Section Title -->
+					<h2 class="experiences__title h2 h2-center-mb50">
+						Inspiring Experiences
+					</h2>
+					<!-- Decor Item (animated dashed line) -->
+					<div data-watch data-watch-once data-watch-threshold='0.5' class="experiences__decor">
+						<svg width="1404" height="631" viewBox="0 0 1404 631" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<linearGradient id="paint0_linear_1_89" x1="2.41915" y1="528" x2="1367.79" y2="37.2646" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#046F67" stop-opacity="0.42" />
+									<stop offset="0.563099" stop-color="#046F67" stop-opacity="0.11" />
+									<stop offset="0.887261" stop-color="#046F67" stop-opacity="0.6" />
+								</linearGradient>
+
+								<mask id="drawing-mask">
+									<path id="mask-path"
+										d="M1402 2.96421C1341.3 2.96421 1280.49 -5.7345 1226.7 29.123C1193.21 50.8211 1171.53 84.6507 1152.73 119.909C1129.02 164.385 1112.84 215.944 1075.65 249.164C1038.47 282.384 992.474 302.45 946.949 313.176C891.782 326.174 839.5 288.042 802.268 249.472C756.511 202.069 724.329 137.723 723.566 69.4382C723.312 46.7514 739.95 21.66 763.213 18.8133C803.402 13.8953 809.266 138.915 810.256 163.302C811.557 195.329 813.348 229.893 803.747 260.859C783.744 325.375 687.9 348.5 673.333 352.03C658.767 355.56 559.552 382 463.412 398.5C367.272 415 256.202 405.47 160.291 437.892C111.67 454.328 60.8404 484.945 29.3681 527.601C5.23745 560.306 5.26762 589.918 2 629.005"
+										stroke="white" stroke-width="4" fill="none" stroke-linecap="round">
+									</path>
+								</mask>
+							</defs>
+
+							<path id="visible-path"
+								d="M1402 2.96421C1341.3 2.96421 1280.49 -5.7345 1226.7 29.123C1193.21 50.8211 1171.53 84.6507 1152.73 119.909C1129.02 164.385 1112.84 215.944 1075.65 249.164C1038.47 282.384 992.474 302.45 946.949 313.176C891.782 326.174 839.5 288.042 802.268 249.472C756.511 202.069 724.329 137.723 723.566 69.4382C723.312 46.7514 739.95 21.66 763.213 18.8133C803.402 13.8953 809.266 138.915 810.256 163.302C811.557 195.329 813.348 229.893 803.747 260.859C783.744 325.375 687.9 348.5 673.333 352.03C658.767 355.56 559.552 382 463.412 398.5C367.272 415 256.202 405.47 160.291 437.892C111.67 454.328 60.8404 484.945 29.3681 527.601C5.23745 560.306 5.26762 589.918 2 629.005"
+								stroke="url(#paint0_linear_1_89)" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" mask="url(#drawing-mask)" />
+
+						</svg>
+					</div>
+					<!-- Slider -->
+					<div class="experiences__slider slider-exp">
+						<div class="slider-exp__slider swiper">
+							<!-- Slider Body -->
+							<div class="slider-exp__wrapper swiper-wrapper">
+
+								<div class="slider-exp__slide swiper-slide">
+									<figure class="_icon-play">
+										<!-- LOCAL VIDEO -->
+										<video controls preload="metadata" poster="files/prev_video-01.jpg">
+											<source src="files/video-01.webm" type="video/webm">
+											<source src="files/video-01.mp4" type="video/mp4">
+										</video>
+										<figcaption>Watch intro video</figcaption>
+									</figure>
+								</div>
+								<div class="slider-exp__slide swiper-slide">
+									<figure class="_icon-play">
+										<!-- LOCAL VIDEO -->
+										<video controls preload="metadata" poster="files/prev_video-02.jpg">
+											<source src="files/video-02.webm" type="video/webm">
+											<source src="files/video-02.mp4" type="video/mp4">
+										</video>
+										<figcaption>Watch intro video</figcaption>
+									</figure>
+								</div>
+								<div class="slider-exp__slide swiper-slide">
+									<figure class="_icon-play">
+										<!-- LOCAL VIDEO -->
+										<video controls preload="metadata" poster="files/prev_video-03.jpg">
+											<source src="files/video-03.webm" type="video/webm">
+											<source src="files/video-03.mp4" type="video/mp4">
+										</video>
+										<figcaption>Watch intro video</figcaption>
+									</figure>
+								</div>
+								<div class="slider-exp__slide swiper-slide">
+									<figure class="_icon-play">
+										<!-- LOCAL VIDEO -->
+										<video controls preload="metadata" poster="files/prev_video-01.jpg">
+											<source src="files/video-01.webm" type="video/webm">
+											<source src="files/video-01.mp4" type="video/mp4">
+										</video>
+										<figcaption>Watch intro video</figcaption>
+									</figure>
+								</div>
+								<div class="slider-exp__slide swiper-slide">
+									<figure class="_icon-play">
+										<!-- LOCAL VIDEO -->
+										<video controls preload="metadata" poster="files/prev_video-03.jpg">
+											<source src="files/video-03.webm" type="video/webm">
+											<source src="files/video-03.mp4" type="video/mp4">
+										</video>
+										<figcaption>Watch intro video</figcaption>
+									</figure>
+								</div>
+
+							</div>
+							<!-- Navigation -->
+							<div class="slider-exp__btn-next _icon-arrow-next"></div>
+							<div class=" slider-exp__btn-prev _icon-arrow-next"></div>
+						</div>
+					</div>
+
+				</div>
+			</section>
 
 
 			<div style="margin-bottom: 200px;"></div>

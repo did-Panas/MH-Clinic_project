@@ -96,3 +96,26 @@
 		color: var(--green-2);
 	}
 }
+
+// ----- Curved-dashed line Animation -----
+
+#mask-path {
+	--path-length: 2247.1123046875;
+
+	stroke-dasharray: var(--path-length);
+	stroke-dashoffset: var(--path-length);
+}
+
+@keyframes drawMaskAnimation {
+	from {
+		stroke-dashoffset: var(--path-length);
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+.vids-slider__decor._watcher-view #mask-path {
+	animation: drawMaskAnimation 5s linear forwards;
+}

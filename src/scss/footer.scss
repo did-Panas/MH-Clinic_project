@@ -274,6 +274,10 @@
 
 		&._icon-arrow-down:before {
 			transition: transform 0.3s ease 0s;
+
+			@media (min-width: em(599.98)) {
+				display: none;
+			}
 		}
 
 		&._spoller-active {

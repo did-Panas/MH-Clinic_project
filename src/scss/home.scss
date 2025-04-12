@@ -1,3 +1,4 @@
+// ===== Hero-Home - Section ==================================
 .hero-home {
 	// .hero-home__container
 	&__container {
@@ -90,3 +91,48 @@
 		row-gap: toRem(30);
 	}
 }
+// ============================================================
+
+// ===== Experiences - Section ================================
+
+.experiences {
+	// .experiences__container
+	&__container {
+	}
+
+	// .experiences__title
+	&__title {
+	}
+
+	// .experiences__decor
+	&__decor {
+	}
+
+	// .experiences__slider
+	&__slider {
+	}
+}
+
+.slider-exp {
+	// .slider-exp__slider
+	&__slider {
+	}
+
+	// .slider-exp__wrapper
+	&__wrapper {
+	}
+
+	// .slider-exp__slide
+	&__slide {
+	}
+
+	// .slider-exp__btn-next
+	&__btn-next {
+	}
+
+	// .slider-exp__btn-prev
+	&__btn-prev {
+	}
+}
+
+// ============================================================
