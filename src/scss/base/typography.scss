@@ -6,13 +6,14 @@
 }
 
 .h2 {
+	margin: 0 auto;
+
 	@include adaptiveValue("font-size", 40, 28, 0, 1200, 768);
 	font-weight: 700;
 	line-height: 130%; /* 52/40 */
 }
 
-.h2-center-mb50 {
-	margin: 0 auto;
+.h2-mb50 {
 	@include adaptiveValue("margin-bottom", 50, 40, 0, 1200, 768);
 }
 

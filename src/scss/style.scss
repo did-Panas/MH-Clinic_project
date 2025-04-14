@@ -183,5 +183,10 @@ body {
 
 	// .home-page__experiences
 	&__experiences {
+		margin: toRem(100) toRem(0) toRem(185);
+	}
+
+	// .home-page__top-services
+	&__top-services {
 	}
 }

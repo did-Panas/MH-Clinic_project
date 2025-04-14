@@ -100,12 +100,41 @@
 	&__container {
 	}
 
+	// .experiences__wrapper
+	&__wrapper {
+		position: relative;
+	}
+
 	// .experiences__title
 	&__title {
 	}
 
 	// .experiences__decor
 	&__decor {
+		position: absolute;
+		@include adaptiveValue("top", 30, -150, 0, 1400, 1200);
+		z-index: -1;
+
+		@media (min-width: em(1439.98)) {
+			width: 100%;
+		}
+
+		@media (max-width: em(1439.98)) {
+			left: toRem(-15);
+			right: toRem(-15);
+		}
+
+		@media (max-width: $mobile) {
+			top: toRem(-200);
+		}
+
+		@media (max-width: $mobileSmall) {
+			top: toRem(-250);
+		}
+
+		& svg {
+			width: 100%;
+		}
 	}
 
 	// .experiences__slider
@@ -120,10 +149,75 @@
 
 	// .slider-exp__wrapper
 	&__wrapper {
+		@include adaptiveValue("margin-bottom", 10, 30, 0, 1400, 1200);
 	}
 
 	// .slider-exp__slide
 	&__slide {
+		position: relative;
+
+		& figure {
+			position: relative;
+
+			aspect-ratio: 453 / 354;
+			width: 100%;
+			padding: toRem(24);
+
+			background: linear-gradient(180deg, rgba(201, 235, 235, 0.7), rgba(255, 255, 255, 0.3) 100%);
+			border-radius: toRem(12);
+		}
+
+		& video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
+
+			width: 89.403974%; /* 405/453 */
+			height: 86.440678%; /* 306/354 */
+
+			cursor: pointer;
+		}
+
+		& figcaption {
+			position: absolute;
+			top: 20.338983%; /* 72/354 */
+			left: 10.596026%; /* 48/453 */
+
+			color: var(--white);
+			@include adaptiveValue("font-size", 24, 17, 0, 1200, 768);
+			font-weight: 600;
+			line-height: 120%;
+
+			pointer-events: none;
+
+			@media (max-width: $tablet) {
+				font-weight: 500;
+			}
+		}
+
+		& img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			width: 17.660044%; /* 80/453 */
+
+			pointer-events: none;
+		}
+	}
+
+	// .slider-exp__nav
+	&__nav {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: toRem(20);
+
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
 	}
 
 	// .slider-exp__btn-next
@@ -132,6 +226,89 @@
 
 	// .slider-exp__btn-prev
 	&__btn-prev {
+		transform: rotate(-180deg);
+	}
+
+	&__btn-next,
+	&__btn-prev {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: toRem(45);
+		height: toRem(45);
+
+		color: var(--text-dark);
+		background-color: var(--blue_20);
+		border-radius: 50%;
+
+		cursor: pointer;
+		transition: background-color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--green-6);
+			}
+		}
+	}
+}
+
+// ============================================================
+
+// ===== Top-Services - Section ===============================
+
+.top-serv {
+	// .top-serv__container
+	&__container {
+	}
+
+	// .top-serv__wrapper
+	&__wrapper {
+	}
+
+	// .top-serv__title
+	&__title {
+	}
+
+	// .top-serv__subtitle
+	&__subtitle {
+	}
+
+	// .top-serv__body
+	&__body {
+	}
+
+	// .top-serv__cards
+	&__cards {
+	}
+
+	// .top-serv__card
+	&__card {
+	}
+
+	// .top-serv__decor
+	&__decor {
+		// .top-serv__decor_r
+		&_r {
+		}
+
+		// .top-serv__decor_l
+		&_l {
+		}
+	}
+}
+
+.t-serv-card {
+	// .t-serv-card__icon
+	&__icon {
+	}
+
+	// .t-serv-card__title
+	&__title {
+	}
+
+	// .t-serv-card__txt
+	&__txt {
 	}
 }
 
