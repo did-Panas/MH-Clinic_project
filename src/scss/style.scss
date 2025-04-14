@@ -189,5 +189,6 @@ body {
 
 	// .home-page__top-services
 	&__top-services {
+		@include adaptiveValue("margin-bottom", 145, 100, 0, 1200, 768);
 	}
 }

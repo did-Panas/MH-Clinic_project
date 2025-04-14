@@ -6,6 +6,8 @@
 	// .how-appoint__title
 	&__title {
 		max-width: 54.714286%; /* 766/1400 */
+		margin: 0 auto;
+		@include adaptiveValue("margin-bottom", 50, 40, 0, 1200, 768);
 
 		@media (max-width: $mobile) {
 			max-width: toRem(410);
@@ -100,7 +102,7 @@
 
 		& figcaption {
 			position: absolute;
-			bottom: 0;
+			bottom: toRem(-50);
 			right: 0;
 
 			display: flex;
@@ -120,6 +122,11 @@
 			@include adaptiveValue("font-size", 16, 9, 0, 1200, 768);
 			font-weight: 700;
 			line-height: 125%; /* 20/16 */
+			opacity: 0;
+
+			transition:
+				bottom 0.9s ease 0s,
+				opacity 0.9s ease 0s;
 
 			&._icon-star:before {
 				display: flex;
@@ -134,6 +141,15 @@
 				color: var(--green-2);
 			}
 		}
+	}
+
+	.how-appoint__decor._watcher-view figcaption {
+		bottom: toRem(0);
+		opacity: 1;
+
+		transition:
+			bottom 1.2s ease-in-out 0.5s,
+			opacity 0.9s ease-in-out 0.5s;
 	}
 
 	// .how-appoint__img
