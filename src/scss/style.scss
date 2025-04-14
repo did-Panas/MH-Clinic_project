@@ -191,4 +191,13 @@ body {
 	&__top-services {
 		@include adaptiveValue("margin-bottom", 145, 100, 0, 1200, 768);
 	}
+
+	// .home-page__how-appoint
+	&__how-appoint {
+		@include adaptiveValue("margin-bottom", 155, 110, 0, 1200, 768);
+	}
+
+	// .home-page__treatments
+	&__treatments {
+	}
 }
