@@ -119,3 +119,39 @@
 .experiences__decor._watcher-view #mask-path {
 	animation: drawMaskAnimation 5s linear forwards;
 }
+
+// ----- Test Animation -----
+
+.wavy-line-in-symbol {
+	stroke-width: 2;
+	stroke-linecap: round;
+	fill: none;
+}
+
+.top-serv__body._watcher-view .wavy-line-in-symbol {
+	animation: draw-within-symbol 5s linear 0s forwards;
+}
+
+#path1-in-symbol {
+	stroke-dasharray: 338.4433898925781;
+	stroke-dashoffset: 338.4433898925781;
+	stroke: url(#paint0_linear_1_2101);
+}
+
+#path2-in-symbol {
+	stroke-dasharray: 338.4420471191406;
+	stroke-dashoffset: 338.4420471191406;
+	stroke: url(#paint1_linear_1_2101);
+}
+
+#path3-in-symbol {
+	stroke-dasharray: 338.4420166015625;
+	stroke-dashoffset: 338.4420166015625;
+	stroke: url(#paint2_linear_1_2101);
+}
+
+@keyframes draw-within-symbol {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

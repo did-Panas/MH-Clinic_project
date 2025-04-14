@@ -183,7 +183,8 @@ body {
 
 	// .home-page__experiences
 	&__experiences {
-		margin: toRem(100) toRem(0) toRem(185);
+		margin: toRem(100) toRem(0) toRem(0);
+		@include adaptiveValue("margin-bottom", 131, 85, 0, 991, 768);
 	}
 
 	// .home-page__top-services

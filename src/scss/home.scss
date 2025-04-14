@@ -264,6 +264,8 @@
 
 	// .top-serv__wrapper
 	&__wrapper {
+		@include adaptiveValue("padding-right", 118, 0, 0, 1450, 992);
+		@include adaptiveValue("padding-left", 118, 0, 0, 1450, 992);
 	}
 
 	// .top-serv__title
@@ -272,43 +274,120 @@
 
 	// .top-serv__subtitle
 	&__subtitle {
+		max-width: toRem(820);
+		margin: toRem(0) auto toRem(0);
+		@include adaptiveValue("margin-bottom", 65, 50, 0, 992, 768);
 	}
 
 	// .top-serv__body
 	&__body {
+		position: relative;
 	}
 
 	// .top-serv__cards
 	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("gap", 50, 15, 0, 1400, 992);
+		justify-content: space-between;
 	}
 
 	// .top-serv__card
 	&__card {
+		flex: 1 1 toRem(354);
+
+		display: grid;
+		@include adaptiveValue("grid-row-gap", 16, 13, 0, 1200, 768);
+		align-content: start;
+
+		@media (max-width: em(752.98)) {
+			justify-items: center;
+			text-align: center;
+		}
+
+		// .top-serv__card_xl
+		&_xl {
+			flex: 1 1 toRem(474);
+		}
+
+		// .top-serv__card_xxl
+		&_xxl {
+			flex: 1 1 toRem(640);
+		}
 	}
 
 	// .top-serv__decor
 	&__decor {
+		position: absolute;
+
+		& svg {
+			@include adaptiveValue("width", 142, 100, 0, 1200, 768);
+			//width: 142px;
+		}
+
 		// .top-serv__decor_r
 		&_r {
+			top: toRem(-15);
+			@include adaptiveValue("left", -118, -15, 0, 1450, 992);
+
+			@media (max-width: em(1449.98)) {
+				top: toRem(-25);
+			}
 		}
 
 		// .top-serv__decor_l
 		&_l {
+			bottom: toRem(-15);
+			@include adaptiveValue("right", -118, -15, 0, 1450, 992);
+
+			transform: rotate(-180deg);
+
+			@media (max-width: em(1449.98)) {
+				bottom: toRem(-25);
+			}
 		}
 	}
 }
 
 .t-serv-card {
+	padding: toRem(20) toRem(30);
+	@include adaptiveValue("padding", 38, 30, 2, 1200, 768);
+
+	font-family: "Manrope", system-ui, sans-serif;
+	border: 2px solid var(--green-4);
+	border-radius: toRem(24);
+	box-shadow: 3.12px 9.37px 21.85px 0px rgba(0, 0, 0, 0.06);
+
 	// .t-serv-card__icon
 	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		height: toRem(44);
+		width: toRem(44);
+
+		background-color: var(--light-1);
+		border-radius: toRem(8);
+
+		& svg {
+			height: toRem(26);
+		}
 	}
 
 	// .t-serv-card__title
 	&__title {
+		color: var(--green-2);
+		@include adaptiveValue("font-size", 20, 16, 0, 1200, 768);
+		font-weight: 700;
 	}
 
 	// .t-serv-card__txt
 	&__txt {
+		color: var(--text-grey-2);
+		@include adaptiveValue("font-size", 14, 12, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 171.428571%; /* 24/14 */
 	}
 }
 
