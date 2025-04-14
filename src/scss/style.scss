@@ -199,5 +199,10 @@ body {
 
 	// .home-page__treatments
 	&__treatments {
+		@include adaptiveValue("margin-bottom", 130, 90, 0, 1200, 768);
+	}
+
+	// .home-page__team
+	&__team {
 	}
 }
