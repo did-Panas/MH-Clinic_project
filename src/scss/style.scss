@@ -199,11 +199,12 @@ body {
 
 	// .home-page__treatments
 	&__treatments {
-		@include adaptiveValue("margin-bottom", 130, 90, 0, 1200, 768);
+		@include adaptiveValue("margin-bottom", 150, 100, 0, 1200, 768);
 	}
 
 	// .home-page__team
 	&__team {
+		@include adaptiveValue("margin-bottom", 130, 90, 0, 1200, 768);
 	}
 
 	// .home-page__testimonials
