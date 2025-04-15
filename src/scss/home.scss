@@ -7,6 +7,7 @@
 	// .hero-home__wrapper
 	&__wrapper {
 		position: relative;
+		z-index: -1;
 
 		padding-top: toRem(84);
 		padding-bottom: toRem(112);
@@ -615,6 +616,63 @@
 	&__author {
 		@include adaptiveValue("font-size", 16, 12, 0, 1200, 768);
 		line-height: 150%; /* 24/16 */
+	}
+}
+
+// ============================================================
+
+// ===== FAQ - Section ========================================
+
+.faq {
+	// .faq__container
+	&__container {
+	}
+
+	// .faq__title
+	&__title {
+	}
+
+	// .faq__subtitle
+	&__subtitle {
+	}
+
+	// .faq__body
+	&__body {
+	}
+
+	// .faq__column
+	&__column {
+	}
+
+	// .faq__photo
+	&__photo {
+	}
+
+	// .faq__description
+	&__description {
+	}
+
+	// .faq__btn
+	&__btn {
+	}
+
+	// .faq__accordeon
+	&__accordeon {
+	}
+}
+
+.faq-spollers {
+	// .faq-spollers__item
+	&__item {
+	}
+
+	// .faq-spollers__title
+	&__title {
+		list-style: none;
+	}
+
+	// .faq-spollers__body
+	&__body {
 	}
 }
 
