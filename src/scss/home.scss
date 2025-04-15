@@ -406,10 +406,19 @@
 
 	// .team__subtitle
 	&__subtitle {
+		max-width: toRem(745);
 	}
 
 	// .team__cards
 	&__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+		grid-gap: toRem(70) toRem(20);
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+			grid-gap: toRem(45) toRem(15);
+		}
 	}
 
 	// .team__card
@@ -420,30 +429,57 @@
 .spec-card {
 	// .spec-card__photo
 	&__photo {
-	}
-
-	// .spec-card__photo-ibg
-	&__photo-ibg {
-	}
-
-	// .spec-card__photo-ibg--containt
-	&__photo-ibg--containt {
+		aspect-ratio: 335 / 240;
+		margin-bottom: toRem(20);
 	}
 
 	// .spec-card__content
 	&__content {
+		display: grid;
+		@include adaptiveValue("grid-gap", 15, 11, 0, 1200, 768);
 	}
 
 	// .spec-card__name
 	&__name {
+		@include adaptiveValue("font-size", 20, 14, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 120%;
 	}
 
 	// .spec-card__roles
 	&__roles {
+		margin-left: toRem(7);
+
+		line-height: 140%;
+
+		& li {
+			display: flex;
+			align-items: first baseline;
+			gap: toRem(7);
+
+			&::before {
+				content: "\2022";
+			}
+		}
 	}
 
 	// .spec-card__quote
 	&__quote {
+		padding-left: toRem(15);
+
+		color: var(--text-grey-4);
+		border-left: 3px solid rgb(4, 111, 103);
+		font-style: italic;
+		line-height: 140%;
+
+		@media (max-width: $tablet) {
+			border-left: 2px solid rgb(4, 111, 103);
+		}
+	}
+
+	&__roles,
+	&__quote {
+		@include adaptiveValue("font-size", 16, 12, 0, 1200, 768);
 	}
 }
 
