@@ -393,7 +393,7 @@
 
 // ============================================================
 
-// ===== Team - Section ===============================
+// ===== Team - Section =======================================
 
 .team {
 	// .team__container
@@ -480,6 +480,50 @@
 	&__roles,
 	&__quote {
 		@include adaptiveValue("font-size", 16, 12, 0, 1200, 768);
+	}
+}
+
+// ============================================================
+
+// ===== Team - Section =======================================
+
+.testimonials {
+	// .testimonials__container
+	&__container {
+	}
+
+	// .testimonials__wrapper
+	&__wrapper {
+	}
+
+	// .testimonials__title
+	&__title {
+	}
+
+	// .testimonials__subtitle
+	&__subtitle {
+	}
+
+	// .testimonials__body
+	&__body {
+	}
+}
+
+.testim-card {
+	// .testim-card__photo
+	&__photo {
+	}
+
+	// .testim-card__photo-ibg
+	&__photo-ibg {
+	}
+
+	// .testim-card__text
+	&__text {
+	}
+
+	// .testim-card__author
+	&__author {
 	}
 }
 
