@@ -4,7 +4,7 @@
 "title":"HomePage"
 })
 
-<body>
+<body style="opacity: 0;">
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
@@ -29,11 +29,11 @@
 
 						<div class="hero-home__btns">
 
-							<a href="#" class="button button--green">
+							<a href="#" class="button button--green" tabindex="0">
 								Book an appointment a the clinic
 							</a>
 
-							<a href="#" class="button button--outline">
+							<a href="#" class="button button--outline" tabindex="0">
 								Book free consultation by phone
 							</a>
 
@@ -56,7 +56,7 @@
 							Inspiring Experiences
 						</h2>
 						<!-- Decor Item (animated dashed line) -->
-						<div data-watch data-watch-once data-watch-threshold='0.5' class="experiences__decor">
+						<div data-watch data-watch-once data-watch-threshold='0.5' class="experiences__decor" aria-hidden="true">
 							<svg width="1404" height="631" viewBox="0 0 1404 631" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<defs>
 									<linearGradient id="paint0_linear_1_89" x1="2.41915" y1="528" x2="1367.79" y2="37.2646" gradientUnits="userSpaceOnUse">
@@ -144,8 +144,8 @@
 								</div>
 								<!-- Navigation -->
 								<div class="slider-exp__nav">
-									<div class="slider-exp__btn-next _icon-arrow-next"></div>
-									<div class=" slider-exp__btn-prev _icon-arrow-next"></div>
+									<div class="slider-exp__btn-next _icon-arrow-next" aria-label="Move to Next Slide"></div>
+									<div class=" slider-exp__btn-prev _icon-arrow-next" aria-label="Move to Previous Slide"></div>
 								</div>
 							</div>
 						</div>
@@ -252,20 +252,20 @@
 								</article>
 							</div>
 							<!-- SVG-animated element  (animated waves - 01)  -->
-							<div class="top-serv__decor top-serv__decor_r">
+							<div class="top-serv__decor top-serv__decor_r" aria-hidden="true">
 								<svg width="142" height="39" aria-label="Animated waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<use xlink:href="#animated-wavy-lines" href="#animated-wavy-lines" />
 								</svg>
 							</div>
 							<!-- SVG-animated element  (animated waves - 02)  -->
-							<div class="top-serv__decor top-serv__decor_l">
+							<div class="top-serv__decor top-serv__decor_l" aria-hidden="true">
 								<svg width="142" height="39" aria-label="Animated waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<use xlink:href="#animated-wavy-lines" href="#animated-wavy-lines" />
 								</svg>
 							</div>
 							<!-- SVG-origin (animated waves) -->
 							<!-- avoiding of the same ID using -->
-							<svg width="0" height="0" style="position: absolute; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<svg width="0" height="0" style="position: absolute; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
 								<defs>
 									<linearGradient id="paint0_linear_1_2101" x1="132.485" y1="2.31679" x2="113.895" y2="50.3448" gradientUnits="userSpaceOnUse">
 										<stop offset="0.140185" stop-color="#0E948A" />
@@ -678,10 +678,6 @@
 
 				</div>
 			</section>
-
-
-
-			<div style="margin-bottom: 200px;"></div>
 
 		</main>
 		@@include('html/_footer.htm',{})

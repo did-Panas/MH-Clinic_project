@@ -5,12 +5,12 @@
 		<div class="header__row">
 
 			<!-- LOGO -->
-			<a href="home.html" class="header__row-item header__logo logo">
+			<a href="home.html" class="header__row-item header__logo logo" aria-label="Move to Home">
 				<img src="@img/logo@1x.png" srcset="@img/logo@2x.png 2x" alt="Logo">
 			</a>
 			<!-- LOCATION -->
 			<address data-da=".menu__body,1199,1" class="header__row-item header__location location">
-				<a href="#" class="location__see-map _icon-location"></a>
+				<a href="#" class="location__see-map _icon-location" aria-label="Move to Location Map"></a>
 				<a href="#" class="location__address">
 					<p>Ramallah - Al-Manara</p>
 					<p>Roundabout - City Center</p>
@@ -38,7 +38,7 @@
 			</div>
 			<!-- CONTACT-PHONES -->
 			<div data-da=".menu__body,1199,3" class="header__row-item header__phones phones">
-				<a href="#" class="phones__call _icon-phone"></a>
+				<a href="#" class="phones__call _icon-phone" aria-label="Make a Call"></a>
 				<ul class="phones__phones-list">
 					<li><a href="#">059-807-0808</a></li>
 					<li><a href="#">052-680-0824</a></li>
@@ -48,16 +48,16 @@
 			<!-- SOCIALS ICONS -->
 			<ul class="header__row-item header__socials socials">
 				<li>
-					<a href="$"><img src="@img/socials/facebook.svg" alt="Socials Logo"></a>
+					<a href="$" aria-label="Move to Facebook"><img src="@img/socials/facebook.svg" alt="Socials Logo"></a>
 				</li>
 				<li>
-					<a href="$"><img src="@img/socials/x-com.svg" alt="Socials Logo"></a>
+					<a href="$" aria-label="Move to X"><img src="@img/socials/x-com.svg" alt="Socials Logo"></a>
 				</li>
 				<li>
-					<a href="$"><img src="@img/socials/insta.svg" alt="Socials Logo"></a>
+					<a href="$" aria-label="Move to Instagram"><img src="@img/socials/insta.svg" alt="Socials Logo"></a>
 				</li>
 				<li>
-					<a href="$"><img src="@img/socials/linkedin.svg" alt="Socials Logo"></a>
+					<a href="$" aria-label="Move to Linkedin"><img src="@img/socials/linkedin.svg" alt="Socials Logo"></a>
 				</li>
 			</ul>
 
@@ -67,13 +67,13 @@
 
 			<!-- HEADER MENU -->
 			<div class="header__menu menu">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<button type="button" class="menu__icon icon-menu" aria-label="Open Menu"><span></span></button>
 				<nav class="menu__body">
 					<ul class="menu__list">
 						<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
 						<li class="menu__item"><a href="#" class="menu__link">About Us</a></li>
 						<li class="menu__item menu__item_menu">
-							<div class="menu__btn">Treatments</div>
+							<button class="menu__btn">Treatments</button>
 							<span class="menu__arrow arrow _icon-arrow-down"></span>
 							<ul class="sub-menu__list">
 								<li class="sub-menu__item">
@@ -102,16 +102,16 @@
 			</div>
 
 			<!-- CALL (for mobile screens) -->
-			<a href="#" class="header__row-item header__call-mob _icon-phone"></a>
+			<a href="#" class="header__row-item header__call-mob _icon-phone" aria-label="Make a Call"></a>
 
 			<!-- LANGUAGE SELECTOR -->
 			<div class="header__lang lang-sel">
 				<div data-spollers data-spollers-speed="350" class="lang-sel__items _icon-planet">
 					<details class="lang-sel__item">
-						<summary type="button" data-spoller data-spoller-close class="lang-sel__btn _icon-arrow-down"></summary>
+						<summary type="button" data-spoller data-spoller-close class="lang-sel__btn _icon-arrow-down" aria-label="Change a Language"></summary>
 						<ul class="lang-sel__list">
-							<li><a href="#" class="lang-sel__link lang-sel__link_curr">EN</a></li>
-							<li><a href="#" class="lang-sel__link">HE</a></li>
+							<li><a href="#" class="lang-sel__link lang-sel__link_curr" aria-current aria-selected>EN</a></li>
+							<li><a href="#" class="lang-sel__link" aria-label="Select a Hebrew Language">HE</a></li>
 						</ul>
 					</details>
 				</div>

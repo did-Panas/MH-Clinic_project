@@ -214,6 +214,7 @@
 	&__nav {
 		display: flex;
 		flex-direction: row-reverse;
+		justify-content: flex-start;
 		gap: toRem(20);
 
 		@media (max-width: $tablet) {
