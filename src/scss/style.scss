@@ -209,6 +209,7 @@ body {
 
 	// .home-page__testimonials
 	&__testimonials {
+		@include adaptiveValue("margin-bottom", 206, 105, 0, 1200, 768);
 	}
 
 	// .home-page__faq
