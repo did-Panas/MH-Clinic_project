@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Best Clinic - About Us"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{
+		"link1":"",
+		"link2":"link-curr",
+		"link3_1":"",
+		"link3_2":"",
+		"link3_3":"",
+		"link3_4":"",
+		"link3_5":"",
+		"link4":"",
+		"link5":"",
+		"link6":"",
+		"link7":""
+		})
+		<main class="page-about-us">
+
+			<!-- Hero -->
+			<section class="page-about-us__hero hero-home">
+				<div class="hero-home__container">
+					<div class="hero-home__wrapper">
+
+						<div class="hero-home__photo hero-home__photo-ibg hero-home__photo-ibg--contain">
+							<img src="@img/home-page/hero-photo@1x.png" srcset="@img/home-page/hero-bg@2x.jpg 2x" alt="Image">
+						</div>
+
+						<h1 class="hero-home__title h1">
+							Men’s Health<br>
+							It’s Our <span>Speciality</span>
+						</h1>
+
+						<p class="hero-home__subtitle">
+							With Best Clinic, your marital/sexual life will be enjoyable and healthy.
+						</p>
+
+						<div class="hero-home__btns">
+
+							<a href="#" class="button button--green" tabindex="0">
+								Book an appointment at the clinic
+							</a>
+
+							<a href="#" class="button button--outline" tabindex="0">
+								Book free consultation by phone
+							</a>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- Numbers -->
+			<section class="page-about-us__numbers">
+				@@include('html/_numbers.htm',{})
+			</section>
+
+			<!-- Treatments -->
+			<section class="home-page__treatments">
+				@@include('html/_treatments.htm',{})
+			</section>
+
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

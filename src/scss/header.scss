@@ -250,6 +250,15 @@
 			grid-template: 1fr repeat(3, auto) / 1fr;
 			grid-row-gap: toRem(35);
 		}
+
+		.link-curr {
+			pointer-events: none;
+			cursor: default;
+
+			& .menu__link {
+				color: var(--light-3);
+			}
+		}
 	}
 
 	// .menu__list
@@ -461,6 +470,8 @@ body.touch {
 // ----- Language Panel -----
 
 .lang-sel {
+	position: relative;
+	z-index: 10;
 	color: var(--white);
 
 	// .lang-sel__items

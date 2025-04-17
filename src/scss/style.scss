@@ -75,7 +75,7 @@ body {
 	}
 	// Сайт завантажений
 	.loaded & {
-		transition: opacity 1.5s ease 0s;
+		transition: opacity 1s ease 0s;
 		opacity: 1 !important;
 	}
 }
