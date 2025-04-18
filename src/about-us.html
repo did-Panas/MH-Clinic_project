@@ -22,31 +22,68 @@
 		<main class="page-about-us">
 
 			<!-- Hero -->
-			<section class="page-about-us__hero hero-home">
-				<div class="hero-home__container">
-					<div class="hero-home__wrapper">
+			<section class="page-about-us__hero hero-about">
+				<div class="hero-about__container">
+					<div class="hero-about__wrapper">
+						<!-- Decor Item (animated dashed line) -->
+						<div class="hero-about__anim-line">
+							<svg width="1404" height="465" viewBox="0 0 1404 465" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<style>
+									#mask-path-new {
+										/* Розрахована довжина шляху для нового SVG */
+										--path-length: 2039.04931640625;
+										stroke-dasharray: var(--path-length);
+										stroke-dashoffset: var(--path-length);
+										animation: drawMaskAnimation 5s linear 1.5s forwards;
+									}
 
-						<div class="hero-home__photo hero-home__photo-ibg hero-home__photo-ibg--contain">
-							<img src="@img/home-page/hero-photo@1x.png" srcset="@img/home-page/hero-bg@2x.jpg 2x" alt="Image">
+									@keyframes drawMaskAnimation {
+										to {
+											stroke-dashoffset: 0;
+										}
+									}
+								</style>
+								<defs>
+									<linearGradient id="paint0_linear_1_464" x1="2.41915" y1="388.737" x2="1246.8" y2="-219.568" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#046F67" stop-opacity="0.42" />
+										<stop offset="0.563099" stop-color="#046F67" stop-opacity="0.11" />
+										<stop offset="0.887261" stop-color="#046F67" stop-opacity="0.6" />
+									</linearGradient>
+									<mask id="drawing-mask-new">
+										<path id="mask-path-new"
+											d="M1402 2.70893C1341.3 2.70893 1280.49 -3.68673 1226.7 21.9419C1193.21 37.8953 1171.53 62.7683 1152.73 88.6917C1129.02 121.392 1112.84 159.301 1075.65 183.725C1038.47 208.15 992.474 222.903 946.949 230.79C891.782 240.346 839.5 212.31 802.268 183.952C756.511 149.099 724.329 101.789 723.566 51.5834C723.312 34.9031 739.95 16.4549 763.213 14.3619C803.402 10.7459 809.266 102.666 810.256 120.596C811.557 144.144 813.348 169.557 803.747 192.324C783.744 239.759 687.9 256.761 673.333 259.356C658.767 261.952 559.552 281.392 463.412 293.523C367.272 305.655 256.202 298.648 160.291 322.486C111.67 334.571 60.8404 357.082 29.3681 388.444C5.23745 412.49 5.26762 434.262 2 463"
+											stroke="white" stroke-width="4" stroke-linecap="round" />
+									</mask>
+								</defs>
+								<path id="visible-path-new"
+									d="M1402 2.70893C1341.3 2.70893 1280.49 -3.68673 1226.7 21.9419C1193.21 37.8953 1171.53 62.7683 1152.73 88.6917C1129.02 121.392 1112.84 159.301 1075.65 183.725C1038.47 208.15 992.474 222.903 946.949 230.79C891.782 240.346 839.5 212.31 802.268 183.952C756.511 149.099 724.329 101.789 723.566 51.5834C723.312 34.9031 739.95 16.4549 763.213 14.3619C803.402 10.7459 809.266 102.666 810.256 120.596C811.557 144.144 813.348 169.557 803.747 192.324C783.744 239.759 687.9 256.761 673.333 259.356C658.767 261.952 559.552 281.392 463.412 293.523C367.272 305.655 256.202 298.648 160.291 322.486C111.67 334.571 60.8404 357.082 29.3681 388.444C5.23745 412.49 5.26762 434.262 2 463"
+									stroke="url(#paint0_linear_1_464)" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" mask="url(#drawing-mask-new)" />
+							</svg>
 						</div>
 
-						<h1 class="hero-home__title h1">
-							Men’s Health<br>
-							It’s Our <span>Speciality</span>
-						</h1>
+						<div class="hero-about__body">
 
-						<p class="hero-home__subtitle">
-							With Best Clinic, your marital/sexual life will be enjoyable and healthy.
-						</p>
+							<div class="hero-about__decor">
 
-						<div class="hero-home__btns">
+								<div class="hero-about__photo hero-about__photo-ibg hero-about__photo-ibg--contain">
+									<img src="@img/about-us/hero-photo@1x.png" srcset="@img/about-us/hero-photo@2x.png 2x" alt="Image">
+								</div>
 
-							<a href="#" class="button button--green" tabindex="0">
+								<div class="hero-about__quote _icon-quotes">
+									<blockquote>
+										I focus on personalised care to restore confidence and improve quality of life. By addressing concerns like erectile dysfunction, we help patients achieve lasting
+										well-being.
+									</blockquote>
+								</div>
+
+							</div>
+
+							<h1 class="hero-about__title h1">
+								About Us
+							</h1>
+
+							<a href="#" class="hero-about__btn button button--green" tabindex="0">
 								Book an appointment at the clinic
-							</a>
-
-							<a href="#" class="button button--outline" tabindex="0">
-								Book free consultation by phone
 							</a>
 
 						</div>
@@ -54,6 +91,12 @@
 					</div>
 				</div>
 			</section>
+
+
+
+
+
+
 			<!-- Numbers -->
 			<section class="page-about-us__numbers">
 				@@include('html/_numbers.htm',{})

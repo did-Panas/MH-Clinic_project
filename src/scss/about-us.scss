@@ -1,0 +1,83 @@
+// ===== Hero-About - Section ==================================
+
+.hero-about {
+	// .hero-about__container
+	&__container {
+	}
+
+	// .hero-about__wrapper
+	&__wrapper {
+		position: relative;
+
+		background-color: var(--light-1);
+		border-radius: toRem(10);
+	}
+
+	// .hero-about__anim-line
+	&__anim-line {
+		position: absolute;
+		top: toRem(32);
+		right: 0;
+	}
+
+	// .hero-about__body
+	&__body {
+		position: relative;
+
+		padding: toRem(140) toRem(118) toRem(163);
+	}
+
+	// .hero-about__decor
+	&__decor {
+		position: absolute;
+
+		bottom: 0;
+		right: 9%;
+
+		width: 30.5%;
+	}
+
+	// .hero-about__photo
+	&__photo {
+		aspect-ratio: 427 / 450;
+	}
+
+	// .hero-about__quote
+	&__quote {
+		position: absolute;
+
+		top: calc(100% - toRem(57));
+		right: toRem(-68);
+
+		width: toRem(300);
+		padding: toRem(18);
+
+		border: 2px solid rgb(4, 111, 103);
+		border-radius: toRem(12);
+		box-shadow: 3.12px 9.37px 21.85px 0px rgba(0, 0, 0, 0.06);
+		background: radial-gradient(circle at 0% 10%, rgba(236, 249, 248, 1) 0%, rgba(255, 255, 255, 1) 50%);
+		font-size: toRem(14);
+		font-weight: 500;
+		line-height: 128.571429%; /* 18/14 */
+
+		&._icon-quotes:before {
+			position: absolute;
+			top: toRem(-45);
+			left: toRem(18);
+
+			color: var(--green-2);
+			font-size: toRem(62);
+		}
+	}
+
+	// .hero-about__title
+	&__title {
+		margin-bottom: toRem(77);
+	}
+
+	// .hero-about__btn
+	&__btn {
+	}
+}
+
+// ============================================================

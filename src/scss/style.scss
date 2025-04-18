@@ -167,6 +167,7 @@ body {
 
 // Підключення стилів окремих сторінок
 @import "home";
+@import "about-us";
 
 // =====================================================
 
@@ -174,6 +175,7 @@ button:focus {
 	outline: 2px solid #005fcc;
 }
 
+// ====== Home-Page ===================
 .home-page {
 	// .home-page__hero
 	&__hero {
@@ -219,5 +221,13 @@ button:focus {
 	// .home-page__faq
 	&__faq {
 		@include adaptiveValue("margin-bottom", 130, 90, 0, 1200, 768);
+	}
+}
+
+// ====== Oage-About-Us ===============
+.page-about-us {
+	// .page-about-us__hero
+	&__hero {
+		margin-bottom: toRem(202);
 	}
 }

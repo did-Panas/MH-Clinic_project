@@ -116,8 +116,8 @@
 	}
 }
 
-.experiences__decor._watcher-view #mask-path {
-	animation: drawMaskAnimation 5s linear forwards;
+.animated-line._watcher-view #mask-path {
+	animation: drawMaskAnimation 5s linear 1s forwards;
 }
 
 // ----- Test Animation -----
