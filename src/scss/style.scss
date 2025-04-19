@@ -228,7 +228,7 @@ button:focus {
 .page-about-us {
 	// .page-about-us__hero
 	&__hero {
-		margin-bottom: toRem(202);
+		@include adaptiveValue("margin-bottom", 202, 95, 0, 1200, 768);
 	}
 
 	// .page-about-us__info

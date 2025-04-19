@@ -43,26 +43,8 @@
 			}
 
 			@media (max-width: $mobileSmall) {
-				padding: toRem(27) toRem(0);
-
-				&::after,
-				&::before {
-					content: "";
-					position: absolute;
-					top: 0;
-
-					height: 100%;
-					width: toRem(50);
-					background-color: var(--green-3);
-				}
-
-				&::before {
-					right: 100%;
-				}
-
-				&::after {
-					left: 100%;
-				}
+				margin: 0 toRem(-15);
+				padding: toRem(27) toRem(15);
 			}
 		}
 	}
