@@ -92,6 +92,12 @@
 		font-weight: 500;
 		line-height: 128.571429%; /* 18/14 */
 
+		transition: opacity 1.2s ease-in-out 1s;
+
+		.loaded & {
+			opacity: 1 !important;
+		}
+
 		@media (max-width: $tablet) {
 			top: calc(100% - toRem(35));
 		}
