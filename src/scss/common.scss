@@ -155,3 +155,23 @@
 		stroke-dashoffset: 0;
 	}
 }
+
+// ----- Stage Appointment -----
+
+.stage-appointment {
+	flex-grow: 0;
+	flex-shrink: 0;
+	@include adaptiveValue("flex-basis", 52, 37, 0, 1200, 768);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include adaptiveValue("height", 52, 37, 0, 1200, 768);
+
+	color: var(--white);
+	font-family: "Manrope", system-ui, sans-serif;
+	@include adaptiveValue("font-size", 32, 23, 0, 1200, 768);
+	font-weight: 700;
+	background: linear-gradient(112.23deg, rgb(14, 148, 138) 21.957%, rgb(197, 234, 233) 88.422%);
+	border-radius: 50%;
+}
