@@ -243,6 +243,11 @@ button:focus {
 
 	// .page-about-us__how-appoint
 	&__how-appoint {
-		margin-bottom: toRem(130);
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
+	}
+
+	// .page-about-us__treatments
+	&__treatments {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
 }
