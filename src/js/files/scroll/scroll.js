@@ -151,24 +151,18 @@ export function digitsCounter() {
 		};
 		window.requestAnimationFrame(step);
 	}
+
 	function digitsCounterAction(e) {
 		const entry = e.detail.entry;
 		const targetElement = entry.target;
 		if (targetElement.querySelectorAll("[data-digits-counter]").length) {
 			digitsCountersInit(targetElement.querySelectorAll("[data-digits-counter]"));
 		}
-
-		// setTimeout(() => {
-		// 	document.querySelectorAll(".numbers__num span").forEach(span => {
-		// 		span.style.opacity = '1';
-		// 	});
-		// }, 4500);
 	}
-
-
 
 	document.addEventListener("watcherCallback", digitsCounterAction);
 }
+
 // При підключенні модуля обробник події запуститься автоматично
 setTimeout(() => {
 	if (addWindowScrollEvent) {
