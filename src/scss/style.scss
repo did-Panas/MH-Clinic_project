@@ -250,4 +250,8 @@ button:focus {
 	&__treatments {
 		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
+
+	// .page-about-us__blogs
+	&__blogs {
+	}
 }

@@ -267,7 +267,7 @@
 
 // ============================================================
 
-// ===== How Make an Appointment - Section ==================================
+// ===== How Make an Appointment - Section ====================
 
 .how-appoint-sm {
 	// .how-appoint-sm__container
@@ -366,6 +366,70 @@
 	&__txt {
 		@include adaptiveValue("font-size", 16, 12, 0, 1200, 768);
 		line-height: 150%;
+	}
+}
+
+// ============================================================
+
+// ===== Blogs - Section ======================================
+
+.blogs {
+	// .blogs__container
+	&__container {
+	}
+
+	// .blogs__top
+	&__top {
+	}
+
+	// .blogs__title
+	&__title {
+	}
+
+	// .blogs__subtitle
+	&__subtitle {
+	}
+
+	// .blogs__btn
+	&__btn {
+	}
+
+	// .blogs__body
+	&__body {
+	}
+}
+
+.card-blogs {
+	// .card-blogs__photo
+	&__photo {
+	}
+
+	// .card-blogs__photo-ibg
+	&__photo-ibg {
+	}
+
+	// .card-blogs__content
+	&__content {
+	}
+
+	// .card-blogs__content-top
+	&__content-top {
+	}
+
+	// .card-blogs__category
+	&__category {
+	}
+
+	// .card-blogs__date
+	&__date {
+	}
+
+	// .card-blogs__title
+	&__title {
+	}
+
+	// .card-blogs__btn
+	&__btn {
 	}
 }
 
