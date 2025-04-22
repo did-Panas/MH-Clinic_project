@@ -253,5 +253,6 @@ button:focus {
 
 	// .page-about-us__blogs
 	&__blogs {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
 }
