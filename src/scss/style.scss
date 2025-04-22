@@ -255,4 +255,9 @@ button:focus {
 	&__blogs {
 		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
+
+	// .page-about-us__contact-us
+	&__contact-us {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
+	}
 }
