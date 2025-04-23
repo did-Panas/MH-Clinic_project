@@ -168,6 +168,7 @@ body {
 // Підключення стилів окремих сторінок
 @import "home";
 @import "about-us";
+@import "blogs";
 
 // =====================================================
 
@@ -224,7 +225,7 @@ button:focus {
 	}
 }
 
-// ====== Oage-About-Us ===============
+// ====== Page-About-Us ===============
 .page-about-us {
 	// .page-about-us__hero
 	&__hero {
@@ -259,5 +260,12 @@ button:focus {
 	// .page-about-us__contact-us
 	&__contact-us {
 		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
+	}
+}
+
+// ====== Page-Blogs ===============
+.page-blogs {
+	// .page-blogs__hero
+	&__hero {
 	}
 }
