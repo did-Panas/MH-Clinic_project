@@ -7,11 +7,15 @@
 
 	// .pop-posted__articles
 	&__articles {
-		height: 520px; // !!!!!!!!!!!!!
-		padding-left: toRem(23);
+		@include adaptiveValue("padding-left", 23, 16, 0, 1200, 768);
 
 		overflow-y: auto;
 		overflow-x: visible;
+
+		.page-blogs__hero & {
+			height: 520px;
+			@include adaptiveValue("height", 520, 330, 0, 1200, 767);
+		}
 
 		& .simplebar-track {
 			right: auto;
@@ -29,14 +33,14 @@
 	// .pop-posted__article
 	&__article {
 		&:not(:last-child) {
-			margin-bottom: toRem(20);
+			@include adaptiveValue("margin-bottom", 20, 14, 0, 1200, 768);
 		}
 	}
 }
 
 .pop-article {
 	display: flex;
-	gap: toRem(20);
+	@include adaptiveValue("gap", 20, 14, 0, 1200, 768);
 
 	max-width: toRem(432);
 
@@ -47,6 +51,12 @@
 
 		border-radius: toRem(7);
 		overflow: hidden;
+
+		@media (max-width: em(699.98)) {
+			.page-blogs__hero & {
+				display: none;
+			}
+		}
 	}
 
 	// .pop-article__content
@@ -55,22 +65,25 @@
 		grid-template-rows: auto auto 1fr;
 		justify-items: start;
 		align-items: start;
-		grid-gap: toRem(8);
+		@include adaptiveValue("grid-gap", 8, 5, 0, 1200, 768);
 	}
 
 	// .pop-article__category
 	&__category {
-		padding: toRem(4) toRem(8);
+		@include adaptiveValue("padding-top", 4, 3, 0, 1200, 768);
+		@include adaptiveValue("padding-right", 8, 6, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 4, 3, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 8, 6, 0, 1200, 768);
 
 		background-color: var(--light-2);
 		border-radius: toRem(3);
 		font-family: "Noto Sans", system-ui, sans-serif;
-		font-size: toRem(12);
+		@include adaptiveValue("font-size", 12, 9, 0, 1200, 768);
 	}
 
 	// .pop-article__title
 	&__title {
-		font-size: toRem(17);
+		@include adaptiveValue("font-size", 17, 12, 0, 1200, 768);
 		font-weight: 500;
 		line-height: 150%;
 	}
@@ -82,10 +95,10 @@
 		align-items: center;
 
 		color: var(--text-grey-6);
-		font-size: toRem(12);
+		@include adaptiveValue("font-size", 12, 8, 0, 1200, 768);
 
 		&._icon-time-sm:before {
-			margin-right: toRem(7);
+			@include adaptiveValue("margin-right", 7, 5, 0, 1200, 768);
 
 			color: var(--text-grey-5);
 		}

@@ -175,3 +175,125 @@
 	background: linear-gradient(112.23deg, rgb(14, 148, 138) 21.957%, rgb(197, 234, 233) 88.422%);
 	border-radius: 50%;
 }
+
+// ----- Blog Card -----
+
+.blog-card {
+	display: flex;
+
+	.hero-blogs & {
+		@include adaptiveValue("column-gap", 15, 11, 0, 1200, 768);
+
+		@include adaptiveValue("padding", 20, 14, 0, 1200, 768);
+
+		background-color: var(--white);
+		border-radius: toRem(7);
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 21, 0, 1200, 768);
+		}
+
+		@media (max-width: em(399.98)) {
+			flex-direction: column;
+			row-gap: toRem(20);
+		}
+	}
+
+	// .blog-card__photo
+	&__photo {
+		flex: 0 0 44.22188%; /* 287/649 */
+
+		border-radius: toRem(7);
+		overflow: hidden;
+
+		.hero-blogs & {
+			aspect-ratio: 287 / 200;
+		}
+	}
+
+	// .blog-card__content
+	&__content {
+		display: grid;
+		grid-template-rows: auto auto 1fr;
+		@include adaptiveValue("grid-row-gap", 12, 8, 0, 1200, 768);
+	}
+
+	// .blog-card__top
+	&__top {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 5, 4, 0, 1200, 768);
+		flex-wrap: wrap;
+		@include adaptiveValue("font-size", 12, 8, 0, 1200, 768);
+
+		& span {
+			@include adaptiveValue("width", 5, 4, 0, 1200, 768);
+			@include adaptiveValue("height", 5, 4, 0, 1200, 768);
+			@include adaptiveValue("margin-right", 3, 2, 0, 1200, 768);
+
+			background-color: var(--text-orange);
+			border-radius: 50%;
+		}
+	}
+
+	// .blog-card__category
+	&__category {
+		@include adaptiveValue("padding-top", 4, 3, 0, 1200, 768);
+		@include adaptiveValue("padding-right", 8, 6, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 4, 3, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 8, 6, 0, 1200, 768);
+
+		background: var(--light-2);
+		border-radius: toRem(3);
+	}
+
+	&__date, 
+	// !!!!!!!!!!!!!!!!
+	&__time {
+		font-family: "Noto Sans", system-ui, sans-serif;
+	}
+
+	// .blog-card__date
+	&__date {
+		@include adaptiveValue("font-size", 14, 10, 0, 1200, 768);
+		font-weight: 500;
+		letter-spacing: 0.05em;
+	}
+
+	// .blog-card__title
+	&__title {
+		@include adaptiveValue("font-size", 27, 19, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 140%;
+
+		// 2 line limit -----
+		overflow: clip;
+		hyphens: auto;
+
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2; // к-сть рядків - висоту можна не встановлювати- додається автоматично
+		-webkit-box-orient: vertical;
+		// ------------------
+	}
+
+	// .blog-card__txt
+	&__txt {
+		align-self: end;
+
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		line-height: 150%;
+
+		// 3 line limit -----
+		overflow: clip;
+		hyphens: auto;
+
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3; // к-сть рядків - висоту можна не встановлювати- додається автоматично
+		-webkit-box-orient: vertical;
+		// ------------------
+	}
+}
+
+// .hero-blogs

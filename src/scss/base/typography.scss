@@ -34,7 +34,7 @@
 }
 
 .h2-sm {
-	font-size: toRem(20);
+	@include adaptiveValue("font-size", 20, 14, 0, 1200, 768);
 	font-weight: 600;
 
 	& span {
