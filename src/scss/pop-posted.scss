@@ -13,7 +13,6 @@
 		overflow-x: visible;
 
 		.page-blogs__hero & {
-			height: 520px;
 			@include adaptiveValue("height", 520, 330, 0, 1200, 767);
 		}
 
@@ -46,6 +45,8 @@
 
 	// .pop-article__img
 	&__img {
+		position: relative;
+
 		aspect-ratio: 129 / 115;
 		flex: 0 0 29.861111%; /* 129/432 */
 
@@ -55,6 +56,22 @@
 		@media (max-width: em(699.98)) {
 			.page-blogs__hero & {
 				display: none;
+			}
+		}
+
+		& a {
+			position: absolute;
+			inset: 0;
+
+			background-color: var(--white_12);
+			opacity: 0;
+
+			transition: opacity 0.3s ease 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -70,15 +87,25 @@
 
 	// .pop-article__category
 	&__category {
-		@include adaptiveValue("padding-top", 4, 3, 0, 1200, 768);
-		@include adaptiveValue("padding-right", 8, 6, 0, 1200, 768);
-		@include adaptiveValue("padding-bottom", 4, 3, 0, 1200, 768);
-		@include adaptiveValue("padding-left", 8, 6, 0, 1200, 768);
+		& a {
+			@include adaptiveValue("padding-top", 4, 3, 0, 1200, 768);
+			@include adaptiveValue("padding-right", 8, 6, 0, 1200, 768);
+			@include adaptiveValue("padding-bottom", 4, 3, 0, 1200, 768);
+			@include adaptiveValue("padding-left", 8, 6, 0, 1200, 768);
 
-		background-color: var(--light-2);
-		border-radius: toRem(3);
-		font-family: "Noto Sans", system-ui, sans-serif;
-		@include adaptiveValue("font-size", 12, 9, 0, 1200, 768);
+			background-color: var(--light-2);
+			border-radius: toRem(3);
+			font-family: "Noto Sans", system-ui, sans-serif;
+			@include adaptiveValue("font-size", 12, 9, 0, 1200, 768);
+
+			transition: color 0.3s ease 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--blue);
+				}
+			}
+		}
 	}
 
 	// .pop-article__title
@@ -86,6 +113,12 @@
 		@include adaptiveValue("font-size", 17, 12, 0, 1200, 768);
 		font-weight: 500;
 		line-height: 150%;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	// .pop-article__read-time
@@ -96,6 +129,14 @@
 
 		color: var(--text-grey-6);
 		@include adaptiveValue("font-size", 12, 8, 0, 1200, 768);
+
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--text-orange);
+			}
+		}
 
 		&._icon-time-sm:before {
 			@include adaptiveValue("margin-right", 7, 5, 0, 1200, 768);

@@ -201,6 +201,8 @@
 
 	// .blog-card__photo
 	&__photo {
+		position: relative;
+
 		flex: 0 0 44.22188%; /* 287/649 */
 
 		border-radius: toRem(7);
@@ -208,6 +210,22 @@
 
 		.hero-blogs & {
 			aspect-ratio: 287 / 200;
+		}
+
+		& a {
+			position: absolute;
+			inset: 0;
+
+			background-color: var(--white_12);
+			opacity: 0;
+
+			transition: opacity 0.3s ease 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
 
@@ -245,6 +263,14 @@
 
 		background: var(--light-2);
 		border-radius: toRem(3);
+
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--blue);
+			}
+		}
 	}
 
 	&__date, 
@@ -258,6 +284,14 @@
 		@include adaptiveValue("font-size", 14, 10, 0, 1200, 768);
 		font-weight: 500;
 		letter-spacing: 0.05em;
+
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--blue);
+			}
+		}
 	}
 
 	// .blog-card__title
@@ -275,6 +309,12 @@
 		-webkit-line-clamp: 2; // к-сть рядків - висоту можна не встановлювати- додається автоматично
 		-webkit-box-orient: vertical;
 		// ------------------
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	// .blog-card__txt
@@ -293,6 +333,12 @@
 		-webkit-line-clamp: 3; // к-сть рядків - висоту можна не встановлювати- додається автоматично
 		-webkit-box-orient: vertical;
 		// ------------------
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }
 
