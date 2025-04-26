@@ -199,17 +199,27 @@
 		}
 	}
 
+	.rec-posted & {
+		flex-direction: column;
+		gap: toRem(20);
+	}
+
 	// .blog-card__photo
 	&__photo {
 		position: relative;
-
-		flex: 0 0 44.22188%; /* 287/649 */
 
 		border-radius: toRem(7);
 		overflow: hidden;
 
 		.hero-blogs & {
 			aspect-ratio: 287 / 200;
+
+			flex: 0 0 44.22188%; /* 287/649 */
+		}
+
+		.rec-posted & {
+			aspect-ratio: 335 / 208;
+			//height: 42.622951%; /* 208/488 */
 		}
 
 		& a {
@@ -240,7 +250,8 @@
 	&__top {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 5, 4, 0, 1200, 768);
+		@include adaptiveValue("column-gap", 5, 4, 0, 1200, 768);
+		row-gap: toRem(7);
 		flex-wrap: wrap;
 		@include adaptiveValue("font-size", 12, 8, 0, 1200, 768);
 
@@ -273,9 +284,8 @@
 		}
 	}
 
-	&__date, 
-	// !!!!!!!!!!!!!!!!
-	&__time {
+	&__date,
+	&__read-time {
 		font-family: "Noto Sans", system-ui, sans-serif;
 	}
 
@@ -287,10 +297,34 @@
 
 		transition: color 0.3s ease 0s;
 
+		& a {
+			white-space: nowrap;
+		}
+
+		.rec-posted & {
+			flex: 1;
+		}
+	}
+
+	// .blog-card__read-time
+	&__read-time {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 6, 4, 0, 1200, 768);
+
+		color: var(--text-grey-6);
+
+		transition: color 0.3s ease 0s;
+
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--blue);
+				color: var(--text-orange);
 			}
+		}
+
+		&._icon-time-sm:before {
+			color: var(--text-grey-5);
+			@include adaptiveValue("font-size", 12, 8, 0, 1200, 768);
 		}
 	}
 
@@ -321,6 +355,8 @@
 	&__txt {
 		align-self: end;
 
+		margin-top: toRem(5);
+
 		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
 		line-height: 150%;
 
@@ -339,7 +375,50 @@
 				text-decoration: underline;
 			}
 		}
+
+		.rec-posted & {
+			margin-bottom: toRem(7);
+		}
+	}
+
+	// .blog-card__btn
+	&__btn {
+		@include adaptiveValue("padding-top", 30, 21, 0, 1200, 768);
+
+		border-top: 1px solid rgb(222, 222, 222);
+
+		& a {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			justify-content: flex-end;
+			@include adaptiveValue("gap", 24, 17, 0, 1200, 768);
+
+			color: var(--green-2);
+			@include adaptiveValue("font-size", 14, 12, 0, 1200, 768);
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.06em;
+
+			transition: color 0.3s ease 0s;
+
+			&._icon-arrow-paging:before {
+				@include adaptiveValue("font-size", 17, 14, 0, 1200, 768);
+
+				transform: rotate(-180deg);
+
+				transition: transform 0.3s ease 0s;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--text-orange);
+
+					&._icon-arrow-paging:before {
+						transform: translate(toRem(3), 0) rotate(-180deg);
+					}
+				}
+			}
+		}
 	}
 }
-
-// .hero-blogs

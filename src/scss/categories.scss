@@ -1,10 +1,16 @@
 .categories {
 	// .categories__title
 	&__title {
-		margin-bottom: toRem(26);
+		@include adaptiveValue("margin-bottom", 26, 18, 0, 1200, 768);
 
-		font-size: toRem(20);
+		@include adaptiveValue("font-size", 20, 14, 0, 1200, 768);
 		font-weight: 600;
+
+		.rec-posted & {
+			@media (max-width: $mobileSmall) {
+				text-align: center;
+			}
+		}
 	}
 
 	// .categories__list
@@ -13,7 +19,8 @@
 
 	// .categories__item
 	&__item {
-		padding: toRem(13) toRem(0) toRem(10);
+		@include adaptiveValue("padding-top", 13, 9, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 10, 7, 0, 1200, 768);
 
 		&:not(:last-child) {
 			border-bottom: 1px dashed var(--green-5);
@@ -27,7 +34,7 @@
 
 		padding: toRem(0) toRem(1) toRem(0);
 
-		font-size: toRem(15);
+		@include adaptiveValue("font-size", 15, 11, 0, 1200, 768);
 		font-weight: 500;
 		line-height: 150%;
 
@@ -36,6 +43,14 @@
 		@media (any-hover: hover) {
 			&:hover {
 				color: var(--text-orange);
+			}
+		}
+
+		& span {
+			transform: translate(0, toRem(5));
+
+			@media (max-width: $tablet) {
+				transform: translate(0, toRem(3));
 			}
 		}
 	}

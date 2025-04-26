@@ -565,6 +565,10 @@
 	// .card-blogs__date
 	&__date {
 		text-transform: uppercase;
+
+		& a {
+			text-wrap: no-wrap;
+		}
 	}
 
 	// .card-blogs__title
@@ -601,7 +605,6 @@
 			@include adaptiveValue("gap", 24, 17, 0, 1200, 768);
 
 			color: var(--green-2);
-			font-size: toRem(14);
 			@include adaptiveValue("font-size", 14, 12, 0, 1200, 768);
 			font-weight: 600;
 			text-transform: uppercase;

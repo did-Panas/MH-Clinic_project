@@ -1,3 +1,5 @@
+// ===== Hero - Section ======================================
+
 .hero-blogs {
 	// .hero-blogs__container
 	&__container {
@@ -54,3 +56,69 @@
 		}
 	}
 }
+
+// ============================================================
+// ===== Recently Posted - Section ====================
+
+.rec-posted {
+	// .rec-posted__container
+	&__container {
+	}
+
+	// .rec-posted__wrapper
+	&__wrapper {
+		display: grid;
+		grid-template: 1fr / 1fr 36.133122%; /* 456/1262 */
+		@include adaptiveValue("grid-gap", 56, 30, 2, 1400, 768);
+		grid-gap: toRem(30);
+
+		padding: toRem(57) toRem(0) toRem(100);
+		@include adaptiveValue("padding-left", 118, 0, 0, 1400, 1200);
+		@include adaptiveValue("padding-right", 20, 0, 0, 1400, 1200);
+
+		@media (max-width: em(599.98)) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: toRem(15);
+		}
+
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+			grid-gap: toRem(50);
+		}
+	}
+
+	// .rec-posted__body
+	&__body {
+	}
+
+	// .rec-posted__title
+	&__title {
+		margin: toRem(3) toRem(0) toRem(0);
+		@include adaptiveValue("margin-bottom", 52, 36, 0, 1200, 768);
+
+		@media (max-width: $mobileSmall) {
+			text-align: center;
+		}
+	}
+
+	// .rec-posted__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiveValue("grid-column-gap", 80, 15, 0, 1400, 768);
+		@include adaptiveValue("grid-row-gap", 80, 50, 0, 1400, 768);
+
+		@media (max-width: em(599.98)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .rec-posted__categories
+	&__categories {
+		@media (max-width: $mobileSmall) {
+			grid-row: 1 / 2;
+		}
+	}
+}
+
+// ============================================================
