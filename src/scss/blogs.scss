@@ -58,7 +58,8 @@
 }
 
 // ============================================================
-// ===== Recently Posted - Section ====================
+
+// ===== Recently Posted - Section ============================
 
 .rec-posted {
 	// .rec-posted__container
@@ -117,6 +118,107 @@
 	&__categories {
 		@media (max-width: $mobileSmall) {
 			grid-row: 1 / 2;
+		}
+	}
+}
+
+// ============================================================
+
+// ===== Blogs SLider - Section ===============================
+
+.slider-blogs {
+	// .slider-blogs__container
+	&__container {
+	}
+
+	// .slider-blogs__slider
+	&__slider {
+		position: relative;
+		padding: 0 toRem(118);
+	}
+
+	// .slider-blogs__wrapper
+	&__wrapper {
+	}
+
+	// .slider-blogs__slide
+	&__slide {
+		position: relative;
+
+		height: toRem(365);
+	}
+
+	// .slider-blogs__card
+	&__card {
+		position: absolute;
+		top: toRem(0);
+		right: toRem(0);
+		z-index: 5000;
+
+		width: 98.283262%; /* 1145/1165 */
+
+		border: 1px solid rgb(239, 240, 246);
+		border-radius: toRem(10);
+		box-shadow: 0.2px 4px 7px 0px rgba(0, 0, 75, 0.15);
+		background: rgb(255, 255, 255);
+	}
+
+	// slider-blogs__slide-shadow
+	&__slide-shadow {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		height: 97.101449%; /* 335/345 */
+
+		background-color: var(--light-1);
+		border-radius: toRem(10);
+	}
+
+	// .slider-blogs__nav
+	&__nav {
+	}
+
+	&__btn-next,
+	&__btn-prev {
+		position: absolute;
+		top: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: toRem(45);
+		height: toRem(45);
+
+		background-color: var(--text-dark_40);
+		border-radius: 50%;
+		color: var(--white);
+		font-size: toRem(24);
+
+		cursor: pointer;
+		transition: background-color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba(20, 20, 20, 0.5);
+			}
+		}
+	}
+
+	// .slider-blogs__btn-next
+	&__btn-next {
+		right: 0;
+		transform: translate(0, -50%);
+	}
+
+	// .slider-blogs__btn-prev
+	&__btn-prev {
+		left: 0;
+		transform: translate(0, -50%);
+
+		&._icon-arrow-next-2:before {
+			transform: rotate(-180deg);
 		}
 	}
 }

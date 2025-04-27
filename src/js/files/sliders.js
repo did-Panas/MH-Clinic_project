@@ -28,6 +28,7 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
+	// Experiences Slider - Home Page
 	if (document.querySelector('.slider-exp__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
 		new Swiper('.slider-exp__slider', { // Вказуємо склас потрібного слайдера
@@ -93,6 +94,80 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 			},
+
+			// Події
+			on: {
+
+			}
+		});
+	}
+
+	// Blogs Slider - Blogs Page
+	if (document.querySelector('.slider-blogs__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.slider-blogs__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 150,
+			//autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагінація
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.slider-blogs__btn-prev',
+				nextEl: '.slider-blogs__btn-next',
+			},
+
+			// Брейкпоінти
+			// breakpoints: {
+			// 	550: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 15,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 15,
+			// 	},
+			// 	1200: {
+			// 		slidesPerView: 3,
+			// 		spaceBetween: 20,
+			// 	},
+			// },
 
 			// Події
 			on: {

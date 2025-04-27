@@ -272,4 +272,9 @@ button:focus {
 	// .page-blogs__recently-posted
 	&__recently-posted {
 	}
+
+	// .page-blogs__slider
+	&__slider {
+		margin-bottom: toRem(100);
+	}
 }
