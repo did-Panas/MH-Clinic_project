@@ -266,14 +266,28 @@
 
 	// .blogs-our__wrapper
 	&__wrapper {
+		@include adaptiveValue("padding-right", 118, 0, 0, 1200, 992);
+		@include adaptiveValue("padding-left", 118, 0, 0, 1200, 992);
 	}
 
 	// .blogs-our__title
 	&__title {
+		margin-bottom: toRem(53);
+
+		@media (max-width: $mobileSmall) {
+			text-align: center;
+		}
 	}
 
 	// .blogs-our__body
 	&__body {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(290), 1fr));
+		grid-row-gap: toRem(50);
+		@include adaptiveValue("grid-column-gap", 80, 15, 0, 1400, 992);
+
+		margin-bottom: toRem(80);
+		margin-bottom: toRem(80);
 	}
 
 	// .blogs-our__nav

@@ -275,10 +275,11 @@ button:focus {
 
 	// .page-blogs__slider
 	&__slider {
-		margin-bottom: toRem(100);
+		@include adaptiveValue("margin-bottom", 103, 85, 0, 1200, 768);
 	}
 
 	// .page-blogs__our-blogs
 	&__our-blogs {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
 }
