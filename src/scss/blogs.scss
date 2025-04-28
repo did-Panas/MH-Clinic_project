@@ -134,18 +134,27 @@
 	// .slider-blogs__slider
 	&__slider {
 		position: relative;
-		padding: 0 toRem(118);
+
+		padding: 0 toRem(65);
+		@include adaptiveValue("padding-right", 118, 65, 2, 1200, 1100);
+		@include adaptiveValue("padding-left", 118, 65, 2, 1200, 1100);
+
+		@media (max-width: $mobile) {
+			padding: toRem(0) toRem(0) toRem(60);
+		}
 	}
 
 	// .slider-blogs__wrapper
 	&__wrapper {
+		position: relative;
 	}
 
 	// .slider-blogs__slide
 	&__slide {
 		position: relative;
+		z-index: 10;
 
-		height: toRem(365);
+		@include adaptiveValue("height", 365, 260, 0, 1200, 768);
 	}
 
 	// .slider-blogs__card
@@ -153,7 +162,6 @@
 		position: absolute;
 		top: toRem(0);
 		right: toRem(0);
-		z-index: 5000;
 
 		width: 98.283262%; /* 1145/1165 */
 
@@ -161,18 +169,30 @@
 		border-radius: toRem(10);
 		box-shadow: 0.2px 4px 7px 0px rgba(0, 0, 75, 0.15);
 		background: rgb(255, 255, 255);
+
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
 	}
 
 	// slider-blogs__slide-shadow
 	&__slide-shadow {
 		position: absolute;
+		z-index: -1;
 		right: 0;
 		left: 0;
 		bottom: 0;
-		height: 97.101449%; /* 335/345 */
+
+		height: 93%;
+		@include adaptiveValue("margin-right", 118, 65, 0, 1200, 1100);
+		@include adaptiveValue("margin-left", 118, 65, 0, 1200, 1100);
 
 		background-color: var(--light-1);
 		border-radius: toRem(10);
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 
 	// .slider-blogs__nav
@@ -182,7 +202,8 @@
 	&__btn-next,
 	&__btn-prev {
 		position: absolute;
-		top: 50%;
+		bottom: 50%;
+		transform: translate(0, 50%);
 
 		display: flex;
 		align-items: center;
@@ -204,18 +225,29 @@
 				background-color: rgba(20, 20, 20, 0.5);
 			}
 		}
+
+		@media (max-width: $mobile) {
+			bottom: 0;
+			transform: translate(0, 0);
+		}
 	}
 
 	// .slider-blogs__btn-next
 	&__btn-next {
 		right: 0;
-		transform: translate(0, -50%);
+
+		@media (max-width: $mobile) {
+			right: 10%;
+		}
 	}
 
 	// .slider-blogs__btn-prev
 	&__btn-prev {
 		left: 0;
-		transform: translate(0, -50%);
+
+		@media (max-width: $mobile) {
+			left: 10%;
+		}
 
 		&._icon-arrow-next-2:before {
 			transform: rotate(-180deg);
