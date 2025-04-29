@@ -169,6 +169,7 @@ body {
 @import "home";
 @import "about-us";
 @import "blogs";
+@import "blog-view";
 
 // =====================================================
 
@@ -281,5 +282,12 @@ button:focus {
 	// .page-blogs__our-blogs
 	&__our-blogs {
 		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
+	}
+}
+
+// ====== Blog-View ===============
+.page-blog-view {
+	// .page-blog-view__hero
+	&__hero {
 	}
 }

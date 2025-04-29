@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Best Clinic - Blogs"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{
+		"link1":"",
+		"link2":"",
+		"link3_1":"",
+		"link3_2":"",
+		"link3_3":"",
+		"link3_4":"",
+		"link3_5":"",
+		"link4":"",
+		"link5":"",
+		"link6":"",
+		"link7":""
+		})
+		<main class="page-blog-view">
+
+			<!-- Hero -->
+			<section class="page-blog-view__hero hero-view">
+				<div class="hero-view__container">
+
+					<!-- Main Section'sPhoto -->
+					<div class="hero-view__photo hero-view__photo-ibg">
+						<img loading="lazy" src="@img/blog-view/hero-photo@1x.jpg" srcset="@img/blog-view/hero-photo@2x.jpg 2x" alt="Blog Photo">
+						<a href="#"></a>
+					</div>
+					<!-- Title Block -->
+					<div class="hero-view__title-block">
+						<h1 class="hero-view__title">
+							Why Regular Check-Ups Matter
+						</h1>
+						<div class="hero-view__author">
+							Written by <cite>John Doe</cite>
+						</div>
+						<div class="hero-view__info">
+
+							<div class="hero-view__category"><a href="#">Men's Health</a></div>
+							<span></span>
+							<time class="hero-view__date" datetime="2022-05-24">
+								<a href="#">MAY 24, 2024</a>
+							</time>
+
+						</div>
+					</div>
+					<!-- Section's Body -->
+					<div class="hero-view__body">
+
+						<!-- Section's Content -->
+						<article class="hero-view__content">
+
+							<p>
+								Regular check-ups are a cornerstone of maintaining good health and preventing serious conditions, yet many men neglect them until issues become severe. Understanding the value
+								of routine health visits can make a significant difference in long-term well-being.
+							</p>
+							<h3>
+								1. Early Detection of Health Issues
+							</h3>
+							<p>
+								Routine check-ups allow healthcare providers to monitor vital signs and perform screenings that can detect health issues before they become problematic. Conditions like high
+								blood pressure, diabetes, and high cholesterol often develop silently, and regular check-ups can identify these issues early. Early detection allows for timely intervention and
+								treatment, which can prevent complications and improve outcomes.
+							</p>
+							<h3>
+								2. Preventive Care
+							</h3>
+							<p>Regular visits to your healthcare provider are an opportunity to receive preventive care tailored to your needs. This includes vaccinations, cancer screenings, and lifestyle
+								advice aimed at reducing risk factors. For instance, screenings for prostate cancer or colon cancer can be crucial for early detection and treatment.
+							</p>
+							<h3>3. Management of Chronic Conditions</h3>
+							<p>
+								For men with existing health conditions, regular check-ups are vital for managing and monitoring these conditions effectively. Whether dealing with diabetes, heart disease, or
+								arthritis, consistent medical supervision helps ensure that treatment plans are working and adjustments are made as needed.
+							</p>
+							<h3>
+								4. Health Maintenance and Lifestyle Counseling
+							</h3>
+							<p>
+								Check-ups are not only about addressing issues but also about maintaining overall health. Healthcare providers can offer personalised advice on diet, exercise, and other
+								lifestyle factors that contribute to better health. Regular discussions about habits and wellness goals can support healthier choices and prevent future health problems.
+							</p>
+							<h3>
+								5. Building a Health Partnership
+							</h3>
+							<p>
+								Regular visits foster a strong relationship with your healthcare provider. This ongoing relationship ensures that your doctor is familiar with your health history and personal
+								needs, leading to more effective and personalised care. It also provides a trusted space to discuss any health concerns or symptoms that may arise.
+							</p>
+							<h3>
+								6. Peace of Mind
+							</h3>
+							<p>
+								Knowing that you are staying on top of your health can provide peace of mind. Regular check-ups help you stay informed about your health status and take proactive steps to
+								address any potential issues. This proactive approach can reduce anxiety about health and empower you to make informed decisions.
+							</p>
+							<h3>
+								Conclusion
+							</h3>
+							<p>
+								Incorporating regular check-ups into your routine is a proactive approach to maintaining and improving your health. By detecting issues early, receiving preventive care,
+								managing chronic conditions, and getting personalised advice, you can significantly enhance your quality of life. Don’t wait for symptoms to appear—schedule your next check-up
+								today and take charge of your health.
+							</p>
+
+						</article>
+						<!-- Aside Panel -->
+						<aside class="hero-view__aside-pnl">
+
+							<!-- Popular Posted -->
+							<div class="hero-view__pop-posted">
+								@@include('html/_pop-posted.htm',{})
+							</div>
+							<!-- Categories -->
+							<div class="hero-view__categories">
+								@@include('html/_categories.htm',{})
+							</div>
+
+						</aside>
+
+					</div>
+
+				</div>
+			</section>
+
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
