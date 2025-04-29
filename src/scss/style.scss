@@ -291,4 +291,9 @@ button:focus {
 	&__hero {
 		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
+
+	// .page-blog-view__how-appoint
+	&__how-appoint {
+		@include adaptiveValue("margin-bottom", 153, 100, 0, 1200, 768);
+	}
 }
