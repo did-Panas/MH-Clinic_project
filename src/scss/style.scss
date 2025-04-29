@@ -297,3 +297,10 @@ button:focus {
 		@include adaptiveValue("margin-bottom", 153, 100, 0, 1200, 768);
 	}
 }
+
+// ====== Treatment ===============
+.page-treatment {
+	// .page-treatment__hero
+	&__hero {
+	}
+}
