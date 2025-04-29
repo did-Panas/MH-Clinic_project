@@ -1,3 +1,4 @@
+// ===== Hero - Section =======================================
 .hero-treatment {
 	// .hero-treatment__container
 	&__container {
@@ -52,3 +53,119 @@
 		line-height: 140%;
 	}
 }
+
+// ============================================================
+
+// ===== Brief Intro - Section =================================
+
+.brief-intro {
+	// .brief-intro__container
+	&__container {
+	}
+
+	// .brief-intro__wrapper
+	&__wrapper {
+		position: relative;
+
+		display: flex;
+		row-gap: toRem(35);
+		column-gap: toRem(36);
+		@include adaptiveValue("column-gap", 51, 36, 2, 1200, 768);
+
+		margin: 0 toRem(50);
+		@include adaptiveValue("margin-right", 212, 50, 2, 1400, 1200);
+		@include adaptiveValue("margin-left", 212, 50, 2, 1400, 1200);
+
+		@media (min-width: $mobile) {
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				z-index: 5;
+
+				aspect-ratio: 126 / 124;
+				width: toRem(126);
+
+				background-image: url("@img/drop-circle.svg");
+				background-position: center center; /* x y */
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+			}
+
+			&::before {
+				top: toRem(-37);
+				left: toRem(-94);
+				transform: translate(toRem(-15), toRem(-15)) scale(0.4);
+				transition: all 3s ease 0s;
+			}
+
+			&::after {
+				bottom: toRem(-70);
+				right: toRem(-95);
+				transform: translate(toRem(15), toRem(15)) scale(0.4);
+				transition: all 3s ease 1s;
+			}
+
+			&._watcher-view::before,
+			&._watcher-view::after {
+				opacity: 1;
+				transform: translate(toRem(0), toRem(0)) scale(1);
+			}
+		}
+
+		@media (max-width: $mobile) {
+			margin: 0 toRem(0);
+		}
+
+		@media (max-width: em(549.98)) {
+			column-gap: toRem(15);
+		}
+
+		@media (max-width: $mobileSmall) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	// .brief-intro__photo
+	&__photo {
+		flex: 0 0 40.061475%; /* 391/976 */
+
+		border-radius: toRem(7);
+		overflow: hidden;
+
+		@media (max-width: em(549.98)) {
+			flex: 0 0 50%;
+		}
+
+		@media (max-width: $mobileSmall) {
+			aspect-ratio: 391 / 281;
+		}
+	}
+
+	// .brief-intro__content
+	&__content {
+		@include adaptiveValue("padding-top", 25, 18, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 26, 18, 0, 1200, 768);
+	}
+
+	// .brief-intro__title
+	&__title {
+		@include adaptiveValue("margin-bottom", 30, 21, 0, 1200, 768);
+
+		@include adaptiveValue("font-size", 25, 18, 0, 1200, 768);
+		font-weight: 700;
+		line-height: 160%; /* 40/25 */
+	}
+
+	// .brief-intro__txt
+	&__txt {
+		color: var(--text-grey-2);
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 150%;
+		letter-spacing: 0.02em;
+	}
+}
+
+// ============================================================

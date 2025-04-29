@@ -304,5 +304,14 @@ button:focus {
 	// .page-treatment__hero
 	&__hero {
 		margin-bottom: toRem(100);
+
+		@media (max-width: $mobileSmall) {
+			margin-bottom: toRem(70);
+		}
+	}
+
+	// .page-treatment__intro
+	&__intro {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
 }
