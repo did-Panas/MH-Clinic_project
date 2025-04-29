@@ -3,15 +3,52 @@
 	&__container {
 	}
 
+	// .hero-treatment__wrapper
+	&__wrapper {
+		position: relative;
+
+		padding: toRem(70) toRem(0) toRem(112);
+		@include adaptiveValue("padding-right", 118, 20, 0, 1200, 768);
+		@include adaptiveValue("padding-Left", 118, 20, 0, 1200, 768);
+
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: toRem(10);
+		overflow: hidden;
+		color: var(--white);
+
+		@media (max-width: $mobileSmall) {
+			margin: 0 toRem(-15);
+
+			border-radius: 0;
+		}
+	}
+
 	// .hero-treatment__photo
 	&__photo {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+	}
+
+	&__title,
+	&__subtitle {
+		letter-spacing: 0.02em;
 	}
 
 	// .hero-treatment__title
 	&__title {
+		max-width: toRem(690);
+		margin-bottom: toRem(22);
+
+		line-height: 140%;
 	}
 
 	// .hero-treatment__subtitle
 	&__subtitle {
+		max-width: toRem(540);
+
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 140%;
 	}
 }

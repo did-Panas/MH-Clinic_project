@@ -170,6 +170,7 @@ body {
 @import "about-us";
 @import "blogs";
 @import "blog-view";
+@import "treatment";
 
 // =====================================================
 
@@ -302,5 +303,6 @@ button:focus {
 .page-treatment {
 	// .page-treatment__hero
 	&__hero {
+		margin-bottom: toRem(100);
 	}
 }
