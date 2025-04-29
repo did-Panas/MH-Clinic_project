@@ -6,7 +6,8 @@
 		@include adaptiveValue("font-size", 20, 14, 0, 1200, 768);
 		font-weight: 600;
 
-		.rec-posted & {
+		.rec-posted &,
+		.hero-view & {
 			@media (max-width: $mobileSmall) {
 				text-align: center;
 			}

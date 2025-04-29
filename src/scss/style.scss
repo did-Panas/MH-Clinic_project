@@ -289,5 +289,6 @@ button:focus {
 .page-blog-view {
 	// .page-blog-view__hero
 	&__hero {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
 }
