@@ -314,4 +314,8 @@ button:focus {
 	&__intro {
 		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
+
+	// .page-treatment__drug-therapy
+	&__drug-therapy {
+	}
 }
