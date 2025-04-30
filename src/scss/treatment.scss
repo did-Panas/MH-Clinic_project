@@ -179,48 +179,105 @@
 
 	// .dr-therapy__top
 	&__top {
+		max-width: toRem(926);
+		margin: 0 auto toRem(50);
 	}
 
 	// .dr-therapy__title
 	&__title {
+		margin-bottom: toRem(10);
 	}
 
 	// .dr-therapy__subtitle
 	&__subtitle {
 	}
 
-	// .dr-therapy__steps
-	&__steps {
+	// .dr-therapy__diagnosis-steps
+	&__diagnosis-steps {
+		margin-bottom: toRem(80);
+	}
+
+	// .dr-therapy__med-resort-steps
+	&__med-resort-steps {
+		margin-bottom: toRem(50);
 	}
 
 	// .dr-therapy__remark
 	&__remark {
+		margin: 0 auto;
+		max-width: toRem(910);
+
+		color: var(--green-5);
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 150%; /* 24/16 */
+		text-align: center;
 	}
 }
 
 .steps-therapy {
 	// .steps-therapy__list
 	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(290), 1fr));
+		grid-auto-rows: 1fr;
+		@include adaptiveValue("grid-gap", 20, 15, 0, 1200, 992);
 	}
 
 	// .steps-therapy__item
 	&__item {
+		@include adaptiveValue("padding-top", 24, 17, 0, 1200, 768);
+		@include adaptiveValue("padding-right", 20, 14, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 20, 14, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 20, 14, 0, 1200, 768);
+
+		border: 1px solid rgb(228, 228, 228);
+		border-radius: toRem(10);
+		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.04);
+		background: rgb(255, 255, 255);
+
+		@media (min-width: em(1399.98)) {
+			min-height: toRem(400);
+		}
 	}
 
 	// .steps-therapy__step-num
 	&__step-num {
+		@include adaptiveValue("margin-bottom", 18, 13, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 17, 12, 0, 1200, 768);
+
+		/* Bg.Subtle */
+		border-bottom: 1px solid rgb(241, 242, 242);
+		color: var(--green);
+		@include adaptiveValue("font-size", 40, 28, 0, 1200, 768);
+		font-weight: 500;
+		line-height: 120%;
 	}
 
 	// .steps-therapy__step-title
 	&__step-title {
+		@include adaptiveValue("margin-bottom", 16, 11, 0, 1200, 768);
+
+		@include adaptiveValue("font-size", 20, 14, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 150%;
+		letter-spacing: 0.02em;
 	}
 
 	// .steps-therapy__step-txt
 	&__step-txt {
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		line-height: 150%;
 	}
 
 	// .steps-therapy__title
 	&__title {
+		@include adaptiveValue("margin-bottom", 50, 35, 0, 1200, 768);
+
+		@include adaptiveValue("font-size", 30, 21, 0, 1200, 768);
+		font-weight: 700;
+		line-height: 140%; /* 42/30 */
+		text-align: center;
 	}
 }
 
