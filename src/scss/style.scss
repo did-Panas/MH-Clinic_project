@@ -171,6 +171,7 @@ body {
 @import "blogs";
 @import "blog-view";
 @import "treatment";
+@import "faq";
 
 // =====================================================
 
@@ -322,5 +323,13 @@ button:focus {
 
 	// .page-treatment__difference
 	&__difference {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
+	}
+}
+
+// ====== FAQ =====================
+.page-faq {
+	// .page-faq__hero
+	&__hero {
 	}
 }
