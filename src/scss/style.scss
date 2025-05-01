@@ -331,5 +331,6 @@ button:focus {
 .page-faq {
 	// .page-faq__hero
 	&__hero {
+		margin-bottom: toRem(71);
 	}
 }
