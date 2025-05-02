@@ -114,6 +114,8 @@
 
 	// .questions-list__wrapper
 	&__wrapper {
+		@include adaptiveValue("margin-right", 237, 0, 0, 1400, 992);
+		@include adaptiveValue("margin-left", 237, 0, 0, 1400, 992);
 	}
 
 	// .questions-list__body
@@ -124,18 +126,77 @@
 .questions-spollers {
 	// .questions-spollers__item
 	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__title,
+	&__body {
+		line-height: 150%;
 	}
 
 	// .questions-spollers__title
 	&__title {
+		display: flex;
+		align-items: first baseline;
+		justify-content: space-between;
+		gap: toRem(20);
+
+		padding: toRem(18) toRem(40) toRem(18) toRem(20);
+
+		background-color: var(--light-2);
+		border-radius: toRem(8);
+		@include adaptiveValue("font-size", 18, 14, 0, 1200, 768);
+		font-weight: 500;
+		text-transform: capitalize;
+		list-style: none;
+
+		cursor: pointer;
+
+		@media (max-width: $mobileSmall) {
+			padding-right: toRem(20);
+		}
 	}
 
 	// .questions-spollers__body
 	&__body {
-	}
-}
+		position: relative;
 
-.plus-icon {
+		padding: toRem(18) toRem(20);
+
+		background-color: var(--light-5);
+		border-radius: 0 0 toRem(8) toRem(8);
+		@include adaptiveValue("font-size", 16, 12, 0, 1200, 768);
+
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			bottom: 100%;
+			right: 0;
+			left: 0;
+
+			width: 100%;
+			height: toRem(10);
+
+			background-color: var(--light-5);
+		}
+
+		& ul {
+			margin-left: toRem(9);
+		}
+
+		& li {
+			display: flex;
+			align-items: first baseline;
+			gap: toRem(10);
+
+			&::before {
+				content: "\2022";
+			}
+		}
+	}
 }
 
 // ============================================================

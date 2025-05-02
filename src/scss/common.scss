@@ -571,3 +571,64 @@
 		}
 	}
 }
+
+// ----- Animated Plus Icon (of Accordeon) -----
+
+.plus-icon {
+	position: relative;
+	z-index: 15;
+
+	flex: 0 0 toRem(19);
+	height: toRem(19);
+
+	@media (max-width: $tablet) {
+		flex: 0 0 toRem(14);
+		height: toRem(14);
+	}
+
+	@media (any-hover: none) {
+		cursor: default;
+	}
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+
+		background-color: var(--white);
+		border-radius: toRem(100);
+
+		transition: all 0.3s ease 0s;
+
+		.questions-list & {
+			background-color: var(--green-5);
+		}
+	}
+	&::before {
+		top: toRem(0);
+		right: calc(50% - toRem(1));
+
+		width: toRem(3);
+		height: 100%;
+
+		@media (max-width: $tablet) {
+			width: toRem(2);
+		}
+	}
+	&::after {
+		right: 0;
+		top: calc(50% - toRem(1));
+
+		width: 100%;
+		height: toRem(3);
+
+		@media (max-width: $tablet) {
+			height: toRem(2);
+		}
+	}
+	._spoller-active & {
+		&::before {
+			transform: rotate(-90deg);
+			top: toRem(1);
+		}
+	}
+}

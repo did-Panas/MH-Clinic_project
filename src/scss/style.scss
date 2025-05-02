@@ -336,5 +336,6 @@ button:focus {
 
 	// .page-faq__content
 	&__content {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
 }
