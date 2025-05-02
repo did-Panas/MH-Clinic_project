@@ -338,4 +338,9 @@ button:focus {
 	&__content {
 		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
 	}
+
+	// .page-faq__contact-us
+	&__contact-us {
+		@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
+	}
 }
