@@ -124,7 +124,7 @@ flsForms.formSubmit();
 // import './libs/select.js'
 
 /* Модуль роботи з календарем */
-// import './files/forms/datepicker.js'
+import './files/forms/datepicker.js'
 
 /* (У роботі) Модуль роботи з масками.*/
 /*

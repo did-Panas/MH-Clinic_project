@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Best Clinic - Blogs"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{
+		"link1":"",
+		"link2":"",
+		"link3_1":"",
+		"link3_2":"",
+		"link3_3":"",
+		"link3_4":"",
+		"link3_5":"",
+		"link4":"",
+		"link5":"",
+		"link6":"",
+		"link7":""
+		})
+		<main class="page-form">
+			<div class="page-form__container">
+
+				<!-- Title -->
+				<h1 class="page-form__title">
+					Book your appointment
+				</h1>
+				<!-- Subtitle -->
+				<p class="page-form__subtitle">
+					Secure your appointment at our clinic with ease. Schedule your treatment today for personalised care at your convenience.
+				</p>
+				<!-- Form -->
+				<form action="#" class="page-form__body">
+
+					<!-- Indicators Panel -->
+					<div class="page-form__indicators indic-panel">
+
+						<div class="indic-panel__progress">
+							<div class="indic-panel__progr-success"></div>
+						</div>
+						<ul class="indic-panel__steps">
+
+							<li class="indic-panel__step">
+								<div class="indic-panel__icon indic-panel__icon-ibg indic-panel__icon-ibg--contain">
+									<img src="@img/appoint-booking/categories.svg" alt="Icon">
+								</div>
+								<p>Categories</p>
+							</li>
+							<li class="indic-panel__step">
+								<div class="indic-panel__icon indic-panel__icon-ibg indic-panel__icon-ibg--contain">
+									<img src="@img/appoint-booking/treatments.svg" alt="Icon">
+								</div>
+								<p>Treatments</p>
+							</li>
+							<li class="indic-panel__step">
+								<div class="indic-panel__icon indic-panel__icon-ibg indic-panel__icon-ibg--contain">
+									<img src="@img/appoint-booking/date.svg" alt="Icon">
+								</div>
+								<p>Date</p>
+							</li>
+							<li class="indic-panel__step">
+								<div class="indic-panel__icon indic-panel__icon-ibg indic-panel__icon-ibg--contain">
+									<img src="@img/appoint-booking/doctors.svg" alt="Icon">
+								</div>
+								<p>Doctors</p>
+							</li>
+							<li class="indic-panel__step">
+								<div class="indic-panel__icon indic-panel__icon-ibg indic-panel__icon-ibg--contain">
+									<img src="@img/appoint-booking/details.svg" alt="Icon">
+								</div>
+								<p>Details</p>
+							</li>
+
+						</ul>
+
+					</div>
+					<!-- FormSteps -->
+					<div class="page-form__steps">
+
+						<!-- Categories step -->
+						<div class="page-form__step categories-step">
+
+							<label class="categories-step__option">
+
+								<div class="categories-step__icon categories-step__icon-ibg categories-step__icon-ibg--contain">
+									<img src="@img/appoint-booking/consult.svg" alt="Icon">
+								</div>
+								<input autocomplete="off" type="radio" name="form[categories]" class="input" value="med-consultation">
+								<h3 class="categories-step__title">
+									Medical consultation
+								</h3>
+								<p class="categories-step__txt">
+									A medical consultation offers tailored health advice, diagnosis, and treatment plans to address your specific needs.
+								</p>
+
+							</label>
+							<label class="categories-step__option">
+
+								<div class="categories-step__icon categories-step__icon-ibg categories-step__icon-ibg--contain">
+									<img src="@img/appoint-booking/therapevt.svg" alt="Icon">
+								</div>
+								<input autocomplete="off" type="radio" name="form[categories]" class="input" value="therap-service">
+								<h3 class="categories-step__title">
+									Therapeutic service
+								</h3>
+								<p class="categories-step__txt">
+									A therapeutic service provides targeted treatments and interventions to improve your physical and mental well-being.
+								</p>
+
+							</label>
+
+						</div>
+						<!-- Treatments step -->
+						<div class="page-form__step treatments-step">
+
+							<label class="treatments-step__option">
+
+								<h3 class="treatments-step__title">
+									Treatment of erectile dysfunction with medications
+								</h3>
+								<input autocomplete="off" type="radio" name="form[treatments]" class="input" value="erect-dysfunction">
+								<p class="treatments-step__txt">
+									Effective treatment of erectile dysfunction with medications: Our clinic offers proven medical solutions to help restore your confidence and improve your sexual health.
+								</p>
+
+							</label>
+							<label class="treatments-step__option">
+
+								<h3 class="treatments-step__title">
+									Linear shock wave therapy for erectile dysfunction
+								</h3>
+								<input autocomplete="off" type="radio" name="form[treatments]" class="input" value="wave-therapy">
+								<p class="treatments-step__txt">
+									Linear shock wave therapy for erectile dysfunction: A non-invasive treatment that stimulates natural healing processes to improve erectile function and enhance sexual
+									performance.
+								</p>
+
+							</label>
+							<label class="treatments-step__option">
+
+								<h3 class="treatments-step__title">
+									Treatment of premature ejaculation
+								</h3>
+								<input autocomplete="off" type="radio" name="form[treatments]" class="input" value="prem-ejaculation">
+								<p class="treatments-step__txt">
+									Effective treatment for premature ejaculation: Our tailored therapies help you gain control and improve your sexual satisfaction and confidence.
+								</p>
+
+							</label>
+
+
+						</div>
+						<!-- Date&Time Appointment -->
+						<div class="page-form__step date-step">
+
+							<!-- Date -->
+							<div class="date-step__date">
+								<label for="date-appoint">Date</label>
+								<input data-datepicker type="text" name="form[appoint-date]" placeholder="Select date" class="input">
+							</div>
+							<!-- Time -->
+							<div class="date-step__time">
+								<label for="date-appoint">Time</label>
+								<input type="text" name="form[appoint-time]" placeholder="First choose date" class="input">
+								<ul class="date-step__time-list">
+
+									<li class="date-step__time-option unavailable">09.00 AM</li>
+									<li class="date-step__time-option unavailable">09.30 AM</li>
+									<li class="date-step__time-option unavailable">10.00 AM</li>
+									<li class="date-step__time-option">10.30 AM</li>
+									<li class="date-step__time-option">11.00 AM</li>
+									<li class="date-step__time-option">11.30 AM</li>
+									<li class="date-step__time-option">3.00 PM</li>
+									<li class="date-step__time-option">3.30 PM</li>
+									<li class="date-step__time-option">4.00 PM</li>
+									<li class="date-step__time-option unavailable">4.30 PM</li>
+									<li class="date-step__time-option unavailable">5.00 PM</li>
+									<li class="date-step__time-option unavailable">5.30 PM</li>
+
+								</ul>
+							</div>
+
+						</div>
+						<!-- Doctors step -->
+						<div class="page-form__step doctors-step">
+
+							<label class="doctors-step__option">
+
+								<div class="doctors-step__photo doctors-step__photo-ibg">
+									<img src="@img/appoint-booking/doctor-01@1x.jpg" srcset="@img/appoint-booking/doctor-01@2x.jpg 2x" alt="Dr. Graham Shadwick" loading="lazy">
+								</div>
+								<div class="doctors-step__content">
+
+									<h3 class="doctors-step__name">
+										Dr. Graham Shadwick
+									</h3>
+									<input autocomplete="off" type="radio" name="form[doctors]" class="input" value="Graham-Shadwick">
+									<ul class="doctors-step__roles">
+										<li>Urology</li>
+										<li>Male disease and erectile dysfunction specialist</li>
+										<li>Stent implant expert</li>
+									</ul>
+
+								</div>
+
+							</label>
+							<label class="doctors-step__option">
+
+								<div class="doctors-step__photo doctors-step__photo-ibg">
+									<img src="@img/appoint-booking/doctor-01@1x.jpg" srcset="@img/appoint-booking/doctor-01@2x.jpg 2x" alt="Dr. Graham Shadwick" loading="lazy">
+								</div>
+								<div class="doctors-step__content">
+
+									<h3 class="doctors-step__name">
+										Dr. Steven Zervas
+									</h3>
+									<input autocomplete="off" type="radio" name="form[doctors]" class="input" value="Steven-Zervas">
+									<ul class="doctors-step__roles">
+										<li>Urology</li>
+										<li>Male disease and erectile dysfunction specialist</li>
+										<li>Stent implant expert</li>
+									</ul>
+
+								</div>
+
+							</label>
+
+						</div>
+						<!-- Details step -->
+						<div class="page-form__step details-step">
+
+							<!-- Radio-btns -->
+							<div class="details-step__options">
+
+								<label class="details-step__option">
+
+									<div class="details-step__icon details-step__icon-ibg details-step__icon-ibg--contain">
+										<img src="@img/appoint-booking/exist-cl.svg" alt="Icon">
+									</div>
+									<input autocomplete="off" type="radio" name="form[details]" class="input" value="exist-client">
+									<p class="categories-step__caption">
+										Exist client
+									</p>
+
+								</label>
+								<label class="details-step__option">
+
+									<div class="details-step__icon details-step__icon-ibg details-step__icon-ibg--contain">
+										<img src="@img/appoint-booking/new-cl.svg" alt="Icon">
+									</div>
+									<input autocomplete="off" type="radio" name="form[details]" class="input" value="new-client">
+									<p class="categories-step__caption">
+										New client
+									</p>
+
+								</label>
+
+							</div>
+							<!-- Phone input -->
+							<!-- !!!!!!!!! + add phone-mask + ?validator? -->
+
+						</div>
+
+					</div>
+					<!-- Buttons -->
+					<div class="page-form__btns">
+
+						<button class="button button--outline">Previous Step</button>
+						<button class="button button--green">Next Step</button>
+
+					</div>
+
+				</form>
+
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

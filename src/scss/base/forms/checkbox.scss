@@ -18,8 +18,11 @@
 			-moz-box-shadow: inset 0px 0px 5px 1px #046f67;
 			box-shadow: inset 0px 0px 5px 1px #046f67;
 		}
-		&:checked + .checkbox__label:before {
+		.contact-us &:checked + .checkbox__label:before {
 			background-image: url("@img/ok.svg");
+		}
+		.page-form &:checked + .checkbox__label:before {
+			background-color: red;
 		}
 	}
 	// .checkbox__label
