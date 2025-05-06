@@ -267,3 +267,19 @@ function animatedCounters() {
 // Запускаємо налаштування анімованих лічильників
 // Краще викликати після завантаження DOM
 document.addEventListener('DOMContentLoaded', animatedCounters);
+
+// ===== PHONE INPUT MASK (IMASK) =================================================
+
+import IMask from 'imask';
+
+const elementMask = document.getElementById('phone-mask');
+
+if (elementMask) {
+	const maskOptions = {
+		mask: '+{972} 00 000 0000'
+	};
+	const mask = IMask(elementMask, maskOptions);
+}
+
+
+// ================================================================================

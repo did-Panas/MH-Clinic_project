@@ -257,8 +257,21 @@
 								</label>
 
 							</div>
-							<!-- Phone input -->
-							<!-- !!!!!!!!! + add phone-mask + ?validator? -->
+							<!-- Phone/name inputs -->
+							<div class="details-step__inputs">
+
+								<!-- Name -->
+								<div class="details-step__name">
+									<label for="phone-mask">Full Name</label>
+									<input autocomplete="off" type="text" name="form[full-name]" data-error="Error" placeholder="Enter your full name" class="input">
+								</div>
+								<!-- Phone -->
+								<div class="details-step__phone">
+									<label for="phone-mask">Phone Number</label>
+									<input type="text" name="form[phone]" class="input" id="phone-mask" placeholder="Enter your phone number">
+								</div>
+
+							</div>
 
 						</div>
 
@@ -272,6 +285,27 @@
 					</div>
 
 				</form>
+				<!-- Finish screen -->
+				<div class="page-form__finish appoint-finish">
+
+					<!-- Icon -->
+					<div class="appoint-finish__icon appoint-finish__icon-ibg appoint-finish__icon-ibg--contain">
+						<img src="@img/appoint-booking/ok-badge.svg" alt="Icon">
+					</div>
+					<!-- Title -->
+					<h3 class="appoint-finish__title">Congratulations!</h3>
+					<!-- Text -->
+					<p class="appoint-finish__txt">
+						Your appointment with Dr. Steven Zervas is confirmed for August 25, 2024, at <span>10:00 AM</span>.
+					</p>
+					<!-- Button -->
+					<button class="appoint-finish__btn button button--green">Done</button>
+					<!-- Editting link -->
+					<a href="#" class="appoint-finish__edit">
+						Edit your appointment
+					</a>
+
+				</div>
 
 			</div>
 		</main>
