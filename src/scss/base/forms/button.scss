@@ -57,6 +57,14 @@
 		@include adaptiveValue("padding-right", 24, 18, 0, 1200, 768);
 		@include adaptiveValue("padding-bottom", 16, 12, 0, 1200, 768);
 		@include adaptiveValue("padding-left", 24, 18, 0, 1200, 768);
+
+		.page-form & {
+			min-width: toRem(162);
+			@include adaptiveValue("padding-top", 10, 8, 0, 1200, 768);
+			@include adaptiveValue("padding-right", 10, 8, 0, 1200, 768);
+			@include adaptiveValue("padding-bottom", 10, 8, 0, 1200, 768);
+			@include adaptiveValue("padding-left", 10, 8, 0, 1200, 768);
+		}
 	}
 
 	&--sm {

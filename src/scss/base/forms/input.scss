@@ -19,6 +19,7 @@ textarea {
 	&._form-error {
 	}
 }
+
 .input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
