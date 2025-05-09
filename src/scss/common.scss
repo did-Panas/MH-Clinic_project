@@ -632,3 +632,38 @@
 		}
 	}
 }
+
+// ----- Input-fake (Appointment-Booking) -----
+
+.input-fake {
+	position: absolute;
+	@include adaptiveValue("top", 20, 14, 0, 1200, 768);
+	@include adaptiveValue("right", 20, 14, 0, 1200, 768);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include adaptiveValue("width", 24, 17, 0, 1200, 768);
+	@include adaptiveValue("height", 24, 17, 0, 1200, 768);
+
+	border: toRem(2) solid var(--grey);
+	border-radius: 50%;
+
+	@media (max-width: $tablet) {
+		border-width: toRem(1);
+	}
+
+	&._icon-ok-circle:before {
+		color: var(--green-2);
+		@include adaptiveValue("font-size", 24, 17, 0, 1200, 768);
+		opacity: 0;
+
+		transition: opacity 0.3s ease 0s;
+
+		.categories-step__input:checked + &,
+		.treatments-step__input:checked + & {
+			opacity: 1;
+		}
+	}
+}

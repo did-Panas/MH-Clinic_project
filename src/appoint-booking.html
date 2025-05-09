@@ -132,7 +132,7 @@
 						<div class="page-form__steps">
 
 							<!-- Categories step -->
-							<div class="page-form__step categories-step">
+							<div class="page-form__step categories-step" style="display: none;">
 
 								<label class="categories-step__option">
 									<div class="categories-step__icon">
@@ -143,7 +143,7 @@
 										</svg>
 									</div>
 									<input autocomplete="off" type="radio" name="form[categories]" class="categories-step__input input" value="med-consultation">
-									<div class="categories-step__input-fake _icon-ok-circle"></div>
+									<div class="categories-step__input-fake input-fake _icon-ok-circle"></div>
 									<h3 class="categories-step__title">
 										Medical consultation
 									</h3>
@@ -162,7 +162,7 @@
 
 									</div>
 									<input autocomplete="off" type="radio" name="form[categories]" class="categories-step__input input" value="therap-service">
-									<div class="categories-step__input-fake _icon-ok-circle"></div>
+									<div class="categories-step__input-fake input-fake _icon-ok-circle"></div>
 									<h3 class="categories-step__title">
 										Therapeutic service
 									</h3>
@@ -174,14 +174,15 @@
 
 							</div>
 							<!-- Treatments step -->
-							<div hidden class="page-form__step treatments-step">
+							<div class="page-form__step treatments-step">
 
 								<label class="treatments-step__option">
 
 									<h3 class="treatments-step__title">
 										Treatment of erectile dysfunction with medications
 									</h3>
-									<input autocomplete="off" type="radio" name="form[treatments]" class="input" value="erect-dysfunction">
+									<input autocomplete="off" type="radio" name="form[treatments]" class="treatments-step__input input" value="erect-dysfunction">
+									<div class="treatments-step__input-fake input-fake _icon-ok-circle"></div>
 									<p class="treatments-step__txt">
 										Effective treatment of erectile dysfunction with medications: Our clinic offers proven medical solutions to help restore your confidence and improve your sexual health.
 									</p>
@@ -192,7 +193,8 @@
 									<h3 class="treatments-step__title">
 										Linear shock wave therapy for erectile dysfunction
 									</h3>
-									<input autocomplete="off" type="radio" name="form[treatments]" class="input" value="wave-therapy">
+									<input autocomplete="off" type="radio" name="form[treatments]" class="treatments-step__input input" value="wave-therapy">
+									<div class="treatments-step__input-fake input-fake _icon-ok-circle"></div>
 									<p class="treatments-step__txt">
 										Linear shock wave therapy for erectile dysfunction: A non-invasive treatment that stimulates natural healing processes to improve erectile function and enhance sexual
 										performance.
@@ -204,7 +206,8 @@
 									<h3 class="treatments-step__title">
 										Treatment of premature ejaculation
 									</h3>
-									<input autocomplete="off" type="radio" name="form[treatments]" class="input" value="prem-ejaculation">
+									<input autocomplete="off" type="radio" name="form[treatments]" class="treatments-step__input input" value="prem-ejaculation">
+									<div class="treatments-step__input-fake input-fake _icon-ok-circle"></div>
 									<p class="treatments-step__txt">
 										Effective treatment for premature ejaculation: Our tailored therapies help you gain control and improve your sexual satisfaction and confidence.
 									</p>

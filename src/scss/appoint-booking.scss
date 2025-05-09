@@ -29,7 +29,7 @@
 			position: absolute;
 
 			aspect-ratio: 126 / 124;
-			@include adaptiveValue("width", 126, 60, 0, 1200, 992);
+			@include adaptiveValue("width", 126, 60, 0, 1500, 992);
 
 			background-image: url("@img/drop-circle.svg");
 			background-position: center center; /* x y */
@@ -38,13 +38,13 @@
 		}
 
 		&::before {
-			@include adaptiveValue("top", 58, 0, 0, 1200, 992);
-			@include adaptiveValue("left", 29, -29, 0, 1200, 992);
+			@include adaptiveValue("top", 58, 0, 0, 1500, 992);
+			@include adaptiveValue("left", 29, -29, 0, 1500, 992);
 		}
 
 		&::after {
-			@include adaptiveValue("bottom", 83, 105, 0, 1200, 992);
-			@include adaptiveValue("right", 29, -29, 0, 1200, 992);
+			@include adaptiveValue("bottom", 83, 105, 0, 1500, 992);
+			@include adaptiveValue("right", 29, -29, 0, 1500, 992);
 		}
 	}
 
@@ -103,10 +103,10 @@
 		align-self: end;
 		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap;
+		flex-wrap: wrap-reverse;
 		gap: toRem(45) toRem(55);
 
-		padding-top: toRem(55);
+		padding-top: toRem(50);
 		@include adaptiveValue("margin-right", 237, 0, 0, 1200, 768);
 		@include adaptiveValue("margin-left", 237, 0, 0, 1200, 768);
 
@@ -234,6 +234,7 @@
 	// .categories-step__option
 	&__option {
 		position: relative;
+		z-index: 5;
 
 		flex: 0 1 toRem(335);
 		display: grid;
@@ -266,10 +267,6 @@
 		@media (max-width: $tablet) {
 			border-width: toRem(1);
 		}
-
-		// @media (max-width: em(399.98)) {
-		// 	flex: 1 1 auto;
-		// }
 	}
 
 	// .categories-step__icon
@@ -297,35 +294,6 @@
 
 	// .categories-step__input-fake
 	&__input-fake {
-		position: absolute;
-		@include adaptiveValue("top", 20, 14, 0, 1200, 768);
-		@include adaptiveValue("right", 20, 14, 0, 1200, 768);
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		@include adaptiveValue("width", 24, 17, 0, 1200, 768);
-		@include adaptiveValue("height", 24, 17, 0, 1200, 768);
-
-		border: toRem(2) solid var(--grey);
-		border-radius: 50%;
-
-		@media (max-width: $tablet) {
-			border-width: toRem(1);
-		}
-
-		&._icon-ok-circle:before {
-			color: var(--green-2);
-			@include adaptiveValue("font-size", 24, 17, 0, 1200, 768);
-			opacity: 0;
-
-			transition: opacity 0.3s ease 0s;
-
-			.categories-step__input:checked + & {
-				opacity: 1;
-			}
-		}
 	}
 
 	// .categories-step__title
@@ -351,16 +319,81 @@
 }
 
 .treatments-step {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(290px, 335px));
+	grid-auto-rows: 1fr;
+	@include adaptiveValue("grid-column-gap", 20, 15, 0, 1200, 768);
+	@include adaptiveValue("grid-row-gap", 30, 15, 0, 991, 768);
+	justify-content: center;
+	justify-items: center;
+
+	-moz-user-select: -moz-none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
 	// .treatments-step__option
 	&__option {
+		position: relative;
+		z-index: 5;
+
+		display: grid;
+		grid-template-rows: auto 1fr;
+		@include adaptiveValue("grid-gap", 15, 11, 0, 1200, 768);
+
+		@include adaptiveValue("padding-top", 55, 40, 0, 1200, 768);
+		@include adaptiveValue("padding-right", 30, 21, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 30, 21, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 20, 14, 0, 1200, 768);
+
+		font-family: "Manrope", system-ui, sans-serif;
+		border: toRem(2) solid rgb(243, 244, 246);
+		border-radius: toRem(10);
+		box-shadow: 3.12px 9.37px 21.85px 0px rgba(0, 0, 0, 0.06);
+		background: rgb(255, 255, 255);
+
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+
+		&:has(.treatments-step__input:checked) {
+			border-color: rgb(27, 173, 162);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 3.12px 9.37px 21.85px 0px rgba(0, 0, 0, 0.2);
+			}
+		}
+
+		@media (max-width: $tablet) {
+			border-width: toRem(1);
+		}
 	}
 
 	// .treatments-step__title
 	&__title {
+		color: var(--green-2);
+		@include adaptiveValue("font-size", 18, 13, 0, 1200, 768);
+		font-weight: 700;
+		line-height: 120%;
+	}
+
+	//.treatments-step__input
+	&__input {
+		display: none;
+	}
+
+	// treatments-step__input-fake
+	&__input-fake {
 	}
 
 	// .treatments-step__txt
 	&__txt {
+		color: var(--text-grey-2);
+		@include adaptiveValue("font-size", 14, 10, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 171.428571%; /* 24/14 */
 	}
 }
 
