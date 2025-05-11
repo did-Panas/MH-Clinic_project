@@ -398,8 +398,40 @@
 }
 
 .date-step {
+	max-width: toRem(690);
+	margin: 0 auto;
+
+	& label {
+		color: var(--text-grey-10);
+	}
+
+	& input {
+		margin-top: toRem(5);
+		padding: toRem(12) toRem(15) toRem(13);
+
+		border: toRem(2) solid rgb(214, 225, 224);
+		border-radius: toRem(4);
+
+		&._form-focus {
+			border-color: var(--green-4);
+			outline: none;
+		}
+	}
+
+	& input::placeholder {
+		color: var(--text-grey-11);
+	}
+
+	& label,
+	& input,
+	& input::placeholder {
+		font-size: toRem(15);
+		font-weight: 600;
+	}
+
 	// .date-step__date
 	&__date {
+		margin-bottom: toRem(30);
 	}
 
 	// .date-step__time
