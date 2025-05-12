@@ -406,11 +406,19 @@
 	}
 
 	& input {
+		height: toRem(40);
 		margin-top: toRem(5);
-		padding: toRem(12) toRem(15) toRem(13);
+		@include adaptiveValue("padding-top", 10, 8, 0, 1200, 768);
+		@include adaptiveValue("padding-right", 15, 12, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 10, 8, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 15, 12, 0, 1200, 768);
 
 		border: toRem(2) solid rgb(214, 225, 224);
 		border-radius: toRem(4);
+
+		@media (max-width: $tablet) {
+			border-width: toRem(1);
+		}
 
 		&._form-focus {
 			border-color: var(--green-4);
@@ -425,7 +433,7 @@
 	& label,
 	& input,
 	& input::placeholder {
-		font-size: toRem(15);
+		@include adaptiveValue("font-size", 15, 12, 0, 1200, 768);
 		font-weight: 600;
 	}
 
@@ -436,14 +444,62 @@
 
 	// .date-step__time
 	&__time {
+		position: relative;
 	}
 
 	// .date-step__time-list
 	&__time-list {
+		position: absolute;
+		left: toRem(-10);
+		top: calc(100% + 10px);
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(100), 1fr));
+		grid-gap: toRem(16);
+
+		width: 104.347826%; /* 720/690 */
+		padding: toRem(10);
+
+		background-color: rgba(255, 255, 255, 0.75);
+
+		&.inactive {
+			display: none;
+		}
 	}
 
 	// .date-step__time-option
 	&__time-option {
+		display: flex;
+		justify-content: center;
+
+		min-width: toRem(105);
+		@include adaptiveValue("padding", 10, 8, 0, 1200, 768);
+
+		background-color: #f9fafb;
+		border-radius: toRem(8);
+		color: var(--text-grey-7);
+		@include adaptiveValue("font-size", 14, 11, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 150%;
+
+		&.available {
+			background-color: var(--light-6);
+			color: #3d3d3d;
+
+			cursor: pointer;
+			transition: background-color 0.3s ease 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #acc5c3;
+				}
+			}
+		}
+
+		&.checked {
+			background-color: var(--green-2);
+			color: var(--white);
+		}
 	}
 }
 

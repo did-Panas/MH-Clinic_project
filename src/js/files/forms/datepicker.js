@@ -16,7 +16,7 @@ if (document.querySelector('[data-datepicker]')) {
 		startDay: 0,
 		//dateSelected: today,
 		minDate: today,
-		disableMobile: true,
+		// disableMobile: true,
 		noWeekends: true,
 		// Додаємо обробник події після створення календаря
 		onShow: function (instance) {
@@ -124,4 +124,14 @@ if (document.querySelector('[data-datepicker]')) {
 
 
 	flsModules.datepicker = picker;
+
+
 }
+
+// document.addEventListener("DOMContentLoaded", function (e) {
+// 	const inputDate = document.querySelector('[data-datepicker]');
+
+// 	if (document.body.classList.contains('touch')) {
+// 		inputDate.type = 'date';
+// 	}
+// });

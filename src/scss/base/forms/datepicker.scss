@@ -4,8 +4,7 @@
 	font-family: sans-serif;
 	color: #3d3d3d;
 	position: absolute;
-	//width: 15.625em;
-	width: toRem(342);
+	width: toRem(295);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -26,6 +25,11 @@
 	// border-right: 1px solid #fff;
 	// border-left: 1px solid #f1ad70;
 	padding: toRem(16);
+
+	@media (min-width: em(379.98)) {
+		width: toRem(342);
+	}
+
 	&:before,
 	&:after {
 		content: "";
@@ -156,7 +160,7 @@
 	display: flex;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
-	//justify-content: space-between;
+	justify-content: space-between;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -189,12 +193,14 @@
 	-webkit-transition: background 0.15s;
 	transition: background 0.15s;
 
-	&.qs-left {
-		order: 2;
-	}
+	@media (min-width: $tablet) {
+		&.qs-left {
+			order: 2;
+		}
 
-	&.qs-right {
-		order: 3;
+		&.qs-right {
+			order: 3;
+		}
 	}
 }
 .qs-datepicker .qs-arrow:hover {
@@ -231,16 +237,21 @@
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
+
 .qs-datepicker .qs-month-year {
-	flex: 1;
-	order: 1;
 	font-size: toRem(14);
 	font-weight: 700;
 	-webkit-transition: border 0.2s;
 	transition: border 0.2s;
 	border-bottom: 1px solid rgba(0, 0, 0, 0);
 	cursor: pointer;
+
+	@media (min-width: $tablet) {
+		flex: 1;
+		order: 1;
+	}
 }
+
 .qs-datepicker .qs-month-year:hover {
 	border-bottom: 1px solid grey;
 }
@@ -258,7 +269,6 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	column-gap: toRem(8);
 	color: #fff;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -271,14 +281,16 @@
 	transition:
 		filter 0.3s,
 		-webkit-filter 0.3s;
+
+	@media (min-width: em(379.98)) {
+		column-gap: toRem(8);
+	}
 }
 .qs-datepicker .qs-squares.qs-blur {
 	-webkit-filter: blur(5px);
 	filter: blur(5px);
 }
 .qs-datepicker .qs-square {
-	width: 14.28571%;
-	height: 1.5625em;
 	width: toRem(36);
 	height: toRem(34);
 	display: -webkit-box;
@@ -310,8 +322,8 @@
 	text-decoration: underline;
 }
 .qs-datepicker .qs-square.qs-active {
-	background: #fff;
-	color: #000;
+	background: var(--green-2);
+	color: var(--white);
 }
 .qs-datepicker .qs-square.qs-range-date-start:not(.qs-range-date-6) {
 	border-top-right-radius: 0;
