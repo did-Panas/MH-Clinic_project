@@ -20,8 +20,14 @@ if (document.querySelector('[data-datepicker]')) {
 		noWeekends: true,
 		// Додаємо обробник події після створення календаря
 		onShow: function (instance) {
+			// Дезактивуємо інпут (неможливо введення/редагування)
+			instance.el.readOnly = true;
 			// Перевіряємо поточний місяць та рік у календарі
 			updateLeftArrowState(instance);
+		},
+		// Використовуємо хук "onHide" щоб розблокувати інпут якщо потрібно
+		onHide: function (instance) {
+			// instance.el.readOnly = false; // Розкоментуйте, якщо хочете дозволити редагування після закриття
 		},
 
 		// Додаємо обробник зміни місяця для підтримки стану disabled

@@ -3,7 +3,7 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 
-// ==================================================================================
+// ===========================s=======================================================
 // ===== BLOCKING SUBMIT-BTN with empty input (before validating) ===================
 
 // const inputSubscript = document.querySelector('.subscribe-form__input');
@@ -284,3 +284,41 @@ if (elementMask) {
 
 // ================================================================================
 
+// ===== TIME SELECTION (APPOINTMENT BOOKING) =====================================
+
+const timeInput = document.querySelector('#time-input');
+const selectPnl = document.querySelector('.date-step__time-list');
+const timeContainer = document.querySelector('.date-step__time');
+const timeInpItems = document.querySelectorAll('.date-step__time-option.available');
+
+if (timeInput) {
+	timeInput.addEventListener("focus", function (e) {
+		// show selection panel
+		selectPnl.classList.remove('inactive');
+
+		// selecting of time-element
+		timeInpItems.forEach(element => {
+			element.addEventListener("click", function (e) {
+				timeInput.value = element.innerHTML;
+
+				selectPnl.classList.add('inactive');
+			});
+		});
+
+		// close sel panel after clicking out of panel
+		handleClickOutside(timeContainer, () => {
+			selectPnl.classList.add('inactive');
+		});
+	});
+}
+
+// Функція для перевірки кліку поза елементом
+function handleClickOutside(element, callback) {
+	document.addEventListener('click', (event) => {
+		if (!element.contains(event.target)) {
+			callback();
+		}
+	});
+}
+
+// ================================================================================
