@@ -607,31 +607,143 @@
 }
 
 .details-step {
+	font-weight: 600;
+
+	&:has(.details-step__option-input_new:checked) {
+		& .details-step__contact-inputs {
+			flex-direction: column;
+		}
+
+		& .details-step__name {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
 	// .details-step__options
 	&__options {
+		display: flex;
+		justify-content: center;
+		gap: toRem(50);
+
+		margin-bottom: toRem(15);
+
+		@media (max-width: $mobile) {
+			margin-bottom: toRem(30);
+		}
 	}
 
 	// .details-step__option
 	&__option {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(8);
+
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+
+		cursor: pointer;
+	}
+
+	// .details-step__option-input
+	&__option-input {
+		display: none;
+
+		&:checked + .details-step__icon {
+			border-color: var(--green-2);
+
+			& path {
+				fill: var(--green-2);
+
+				transition: fill 0.3s ease 0s;
+			}
+		}
 	}
 
 	// .details-step__icon
 	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include adaptiveValue("width", 80, 64, 0, 1200, 768);
+		@include adaptiveValue("height", 80, 64, 0, 1200, 768);
+
+		border: 2px solid var(--light-7);
+		border-radius: 50%;
+
+		transition: all 0.3s ease 0s;
+
+		@media (max-width: $tablet) {
+			border-width: toRem(1);
+		}
+
+		& svg {
+			@include adaptiveValue("width", 43, 35, 0, 1200, 768);
+		}
 	}
 
-	// .details-step__inputs
-	&__inputs {
+	// .details-step__contact-inputs
+	&__contact-inputs {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: toRem(15);
+
+		max-width: toRem(690);
+		margin: 0 auto;
+
+		@include adaptiveValue("font-size", 15, 10, 0, 1200, 768);
+
+		& label {
+			color: var(--text-grey-10);
+		}
+
+		& input {
+			height: toRem(40);
+			margin-top: toRem(5);
+			@include adaptiveValue("padding-top", 10, 8, 0, 1200, 768);
+			@include adaptiveValue("padding-right", 15, 12, 0, 1200, 768);
+			@include adaptiveValue("padding-bottom", 10, 8, 0, 1200, 768);
+			@include adaptiveValue("padding-left", 15, 12, 0, 1200, 768);
+
+			border: toRem(2) solid rgb(214, 225, 224);
+			border-radius: toRem(4);
+
+			@media (max-width: $tablet) {
+				border-width: toRem(1);
+			}
+
+			&._form-focus {
+				border-color: var(--green-4);
+				outline: none;
+			}
+		}
+
+		& input::placeholder {
+			color: var(--text-grey-11);
+		}
+
+		& label,
+		& input,
+		& input::placeholder {
+			@include adaptiveValue("font-size", 15, 12, 0, 1200, 768);
+			font-weight: 600;
+		}
 	}
 
 	// .details-step__name
 	&__name {
+		visibility: hidden;
+		opacity: 0;
+
+		transition: all 0.3s ease 0s;
 	}
 
 	// .details-step__phone
 	&__phone {
 	}
 }
-
+// D6E1E0 046F67
 .appoint-finish {
 	// .appoint-finish__icon
 	&__icon {
