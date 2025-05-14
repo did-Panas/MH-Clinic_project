@@ -14,13 +14,15 @@
 
 		padding: toRem(30) toRem(0) toRem(48);
 
-		border: 1px solid rgb(239, 240, 246);
-		border-radius: toRem(10);
-		box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
-		background: rgb(255, 255, 255);
-
 		@media (min-width: em(1399.98)) {
 			min-height: toRem(695);
+		}
+
+		@media (min-width: $mobileSmall) {
+			border: 1px solid rgb(239, 240, 246);
+			border-radius: toRem(10);
+			box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
+			background: rgb(255, 255, 255);
 		}
 
 		&::before,
@@ -504,20 +506,103 @@
 }
 
 .doctors-step {
+	display: flex;
+	@include adaptiveValue("gap", 20, 15, 0, 1200, 992);
+	justify-content: center;
+	flex-wrap: wrap;
+
 	// .doctors-step__option
 	&__option {
+		flex: 0 1 toRem(415);
+		display: flex;
+		gap: toRem(10);
+
+		@include adaptiveValue("padding-top", 18, 13, 0, 1200, 768);
+		@include adaptiveValue("padding-right", 18, 13, 0, 1200, 768);
+		@include adaptiveValue("padding-bottom", 20, 14, 0, 1200, 768);
+		@include adaptiveValue("padding-left", 19, 13, 0, 1200, 768);
+
+		box-sizing: border-box;
+		border: toRem(2) solid rgb(243, 244, 246);
+		border-radius: toRem(10);
+		box-shadow: 3.12px 9.37px 21.85px 0px rgba(0, 0, 0, 0.06);
+		background: rgb(255, 255, 255);
+
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+
+		&:has(.doctors-step__input:checked) {
+			border-color: rgb(27, 173, 162);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 3.12px 9.37px 21.85px 0px rgba(0, 0, 0, 0.2);
+			}
+		}
+
+		@media (max-width: $tablet) {
+			border-width: toRem(1);
+		}
 	}
 
 	// .doctors-step__photo
 	&__photo {
+		flex: 0 0 26.385224%; /* 100/379 */
+
+		aspect-ratio: 100 / 120;
+		height: 100%;
+
+		border-radius: toRem(5);
+		overflow: hidden;
+	}
+
+	// .doctors-step__content
+	&__content {
+		display: grid;
+		grid-template: 1fr auto / 1fr auto;
+		grid-column-gap: toRem(10);
+
+		font-family: "Manrope", system-ui, sans-serif;
 	}
 
 	// .doctors-step__name
 	&__name {
+		margin-left: toRem(3);
+
+		color: var(--green-2);
+		@include adaptiveValue("font-size", 20, 14, 0, 1200, 768);
+		font-weight: 700;
+	}
+
+	// .doctors-step__input
+	&__input {
+		display: none;
+	}
+
+	// .doctors-step__input-fake
+	&__input-fake {
 	}
 
 	// .doctors-step__roles
 	&__roles {
+		grid-column: 1 / -1;
+		display: grid;
+
+		& li {
+			display: flex;
+			align-items: first baseline;
+			@include adaptiveValue("gap", 7, 5, 0, 1200, 768);
+
+			color: var(--text-grey-2);
+			font-size: toRem(14);
+			font-weight: 600;
+			line-height: 171.428571%; /* 24/14 */
+
+			&::before {
+				content: "\2022";
+			}
+		}
 	}
 }
 

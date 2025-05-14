@@ -217,7 +217,7 @@
 
 							</div>
 							<!-- Date&Time Appointment -->
-							<div class="page-form__step date-step">
+							<div class="page-form__step date-step" style="display: none;">
 
 								<!-- Date -->
 								<div class="date-step__date">
@@ -248,7 +248,7 @@
 
 							</div>
 							<!-- Doctors step -->
-							<div hidden class="page-form__step doctors-step">
+							<div class="page-form__step doctors-step">
 
 								<label class="doctors-step__option">
 
@@ -260,7 +260,8 @@
 										<h3 class="doctors-step__name">
 											Dr. Graham Shadwick
 										</h3>
-										<input autocomplete="off" type="radio" name="form[doctors]" class="input" value="Graham-Shadwick">
+										<input autocomplete="off" type="radio" name="form[doctors]" class="doctors-step__input input" value="Graham-Shadwick">
+										<div class="doctors-step__input-fake input-fake _icon-ok-circle"></div>
 										<ul class="doctors-step__roles">
 											<li>Urology</li>
 											<li>Male disease and erectile dysfunction specialist</li>
@@ -273,14 +274,15 @@
 								<label class="doctors-step__option">
 
 									<div class="doctors-step__photo doctors-step__photo-ibg">
-										<img src="@img/appoint-booking/doctor-01@1x.jpg" srcset="@img/appoint-booking/doctor-01@2x.jpg 2x" alt="Dr. Graham Shadwick" loading="lazy">
+										<img src="@img/appoint-booking/doctor-02@1x.jpg" srcset="@img/appoint-booking/doctor-02@2x.jpg 2x" alt="Dr. Graham Shadwick" loading="lazy">
 									</div>
 									<div class="doctors-step__content">
 
 										<h3 class="doctors-step__name">
 											Dr. Steven Zervas
 										</h3>
-										<input autocomplete="off" type="radio" name="form[doctors]" class="input" value="Steven-Zervas">
+										<input autocomplete="off" type="radio" name="form[doctors]" class="doctors-step__input input" value="Steven-Zervas">
+										<div class="doctors-step__input-fake input-fake _icon-ok-circle"></div>
 										<ul class="doctors-step__roles">
 											<li>Urology</li>
 											<li>Male disease and erectile dysfunction specialist</li>
