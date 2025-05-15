@@ -1,5 +1,5 @@
 .page-form {
-	@include adaptiveValue("margin-bottom", 130, 100, 0, 1200, 768);
+	@include adaptiveValue("margin-bottom", 130, 70, 0, 1200, 768);
 
 	// .page-form__container
 	&__container {
@@ -9,8 +9,8 @@
 	&__wrapper {
 		position: relative;
 
-		display: grid;
-		grid-template-rows: auto 1fr;
+		display: flex;
+		flex-direction: column;
 
 		padding: toRem(30) toRem(0) toRem(48);
 
@@ -84,6 +84,7 @@
 
 	// .page-form__body
 	&__body {
+		flex: 1;
 		display: grid;
 		grid-template-rows: auto auto 1fr;
 	}
@@ -119,6 +120,7 @@
 
 	// .page-form__finish
 	&__finish {
+		flex: 1;
 	}
 }
 
@@ -743,25 +745,74 @@
 	&__phone {
 	}
 }
-// D6E1E0 046F67
+
 .appoint-finish {
+	display: grid;
+	justify-items: center;
+	align-content: center;
+	text-align: center;
+
+	height: 100%;
+
+	@media (min-width: $pc) {
+		padding-bottom: toRem(47);
+	}
+
 	// .appoint-finish__icon
 	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include adaptiveValue("width", 131, 66, 0, 1200, 768);
+		@include adaptiveValue("height", 131, 66, 0, 1200, 768);
+		@include adaptiveValue("margin-bottom", 20, 14, 0, 1200, 768);
+
+		background-color: var(--green-6);
+		border-radius: 50%;
+
+		& svg {
+			@include adaptiveValue("width", 51, 26, 0, 1200, 768);
+		}
 	}
 
 	// .appoint-finish__title
 	&__title {
+		@include adaptiveValue("margin-bottom", 8, 6, 0, 1200, 768);
+
+		@include adaptiveValue("font-size", 20, 14, 0, 1200, 768);
+		font-weight: 600;
+		line-height: 150%;
 	}
 
 	// .appoint-finish__txt
 	&__txt {
+		max-width: toRem(450);
+		@include adaptiveValue("margin-bottom", 40, 28, 0, 1200, 768);
+
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		line-height: 150%;
 	}
 
 	// .appoint-finish__btn
 	&__btn {
+		@include adaptiveValue("margin-bottom", 20, 14, 0, 1200, 768);
 	}
 
 	// .appoint-finish__edit
 	&__edit {
+		color: var(--green);
+		@include adaptiveValue("font-size", 16, 11, 0, 1200, 768);
+		font-weight: 500;
+		line-height: 150%;
+		text-decoration: underline;
+
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--green-2);
+			}
+		}
 	}
 }
