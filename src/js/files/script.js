@@ -322,3 +322,107 @@ function handleClickOutside(element, callback) {
 }
 
 // ================================================================================
+
+// ===== PAGE-FORM (APPOINT-BOOKING) ==============================================
+
+function initStepForm() {
+
+	const form = document.querySelector('.page-form__body');
+	const steps = document.querySelectorAll('.page-form__step');
+	const prevBtn = document.querySelector('.page-form__prev');
+	const nextBtn = document.querySelector('.page-form__next');
+	const btnsBlock = document.querySelector('.page-form__btns');
+	const finishBlock = document.querySelector('.appoint-finish');
+	const stepIndicators = document.querySelectorAll('.indic-panel__step');
+	const progressLines = document.querySelectorAll('.indic-panel__progr-line');
+	const inputDate = document.querySelector('.input-date');
+	const inputTime = document.querySelector('.input-time');
+	const inputPhone = document.querySelector('.input-phone');
+	const israeliPhoneRegex = /^\+972[\s-]?(\d{1,2}[\s-]?\d{3}[\s-]?\d{4})$/;
+
+
+	form.addEventListener("submit", (e => e.preventDefault()));
+
+	let formStepIndex = 0;
+
+	prevBtn.addEventListener("click", (() => {
+
+		stepIndicators[formStepIndex].classList.remove('complete');
+		progressLines[formStepIndex - 1].classList.remove('animate');
+
+		formStepIndex--;
+		updateFormSteps();
+	}));
+
+	nextBtn.addEventListener("click", (() => {
+
+		if (formStepIndex < (steps.length - 1)) {
+
+			if (steps[formStepIndex].classList.contains('date-step')) {
+				if (inputDate.value.length > 0 && inputTime.value.length > 0) {
+					makeNextStep();
+				}
+			}
+			else {
+				makeNextStep();
+			}
+
+		}
+
+	}));
+
+	function updateFormSteps() {
+
+		steps.forEach((step => {
+			step.classList.contains("active") && step.classList.remove("active");
+		}));
+
+		steps[formStepIndex].classList.add("active");
+
+		if (formStepIndex === 0) {
+			prevBtn.style.display = "none";
+		} else {
+			prevBtn.style.display = "block";
+		}
+
+		if (formStepIndex === steps.length - 1) {
+			nextBtn.innerHTML = "Submit";
+			nextBtn.addEventListener("click", (() => {
+				if (israeliPhoneRegex.test(inputPhone.value)) {
+					finishBlock.style.display = "grid";
+					steps[formStepIndex].classList.remove("active");
+					btnsBlock.style.display = "none";
+				}
+
+			}));
+		} else {
+			nextBtn.innerHTML = "Next";
+
+		}
+
+	}
+
+	function makeNextStep() {
+		stepIndicators[formStepIndex + 1].classList.add('complete');
+		progressLines[formStepIndex].classList.add('animate');
+
+		formStepIndex++;
+		updateFormSteps();
+	}
+
+	function blockNextBtn() {
+		nextBtn.classList.add('disabled');
+		nextBtn.disabled = true;
+	}
+
+	function unblockNextBtn() {
+		nextBtn.classList.remove('disabled');
+		nextBtn.disabled = false;
+	}
+
+	updateFormSteps();
+
+}
+
+if (document.querySelector(".page-form__body")) initStepForm();
+

@@ -24,7 +24,7 @@
 				<div class="page-form__wrapper">
 
 					<!-- Top (title, subtitle) -->
-					<div class="page-form__top" style="display: none;">
+					<div class="page-form__top">
 						<!-- Title -->
 						<h1 class="page-form__title">
 							Book your appointment
@@ -35,17 +35,14 @@
 						</p>
 					</div>
 					<!-- Form -->
-					<form action="#" class="page-form__body" style="display: none;">
+					<form action="#" class="page-form__body">
 
 						<!-- Indicators Panel -->
 						<div class="page-form__indicators indic-panel">
 
-							<div class="indic-panel__progress">
-								<div class="indic-panel__progr-success"></div>
-							</div>
 							<div class="indic-panel__steps">
 
-								<div class="indic-panel__step current">
+								<div class="indic-panel__step complete">
 									<div class="indic-panel__icon">
 										<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
@@ -132,7 +129,7 @@
 						<div class="page-form__steps">
 
 							<!-- Categories step -->
-							<div class="page-form__step categories-step" style="display: none;">
+							<div class="page-form__step categories-step">
 
 								<label class="categories-step__option">
 									<div class="categories-step__icon">
@@ -142,7 +139,7 @@
 												fill="#046F67" />
 										</svg>
 									</div>
-									<input autocomplete="off" type="radio" name="form[categories]" class="categories-step__input input" value="med-consultation">
+									<input checked autocomplete="off" type="radio" name="form[categories]" class="categories-step__input input" value="med-consultation">
 									<div class="categories-step__input-fake input-fake _icon-ok-circle"></div>
 									<h3 class="categories-step__title">
 										Medical consultation
@@ -174,14 +171,14 @@
 
 							</div>
 							<!-- Treatments step -->
-							<div class="page-form__step treatments-step" style="display: none;">
+							<div class="page-form__step treatments-step">
 
 								<label class="treatments-step__option">
 
 									<h3 class="treatments-step__title">
 										Treatment of erectile dysfunction with medications
 									</h3>
-									<input autocomplete="off" type="radio" name="form[treatments]" class="treatments-step__input input" value="erect-dysfunction">
+									<input checked autocomplete="off" type="radio" name="form[treatments]" class="treatments-step__input input" value="erect-dysfunction">
 									<div class="treatments-step__input-fake input-fake _icon-ok-circle"></div>
 									<p class="treatments-step__txt">
 										Effective treatment of erectile dysfunction with medications: Our clinic offers proven medical solutions to help restore your confidence and improve your sexual health.
@@ -217,17 +214,17 @@
 
 							</div>
 							<!-- Date&Time Appointment -->
-							<div class="page-form__step date-step" style="display: none;">
+							<div class="page-form__step date-step">
 
 								<!-- Date -->
 								<div class="date-step__date">
 									<label for="date-appoint">Date</label>
-									<input data-datepicker type="text" name="form[appoint-date]" placeholder="Select date" class="input">
+									<input data-datepicker type="text" name="form[appoint-date]" placeholder="Select date" class="input input-date">
 								</div>
 								<!-- Time -->
 								<div class="date-step__time">
 									<label for="date-appoint">Time</label>
-									<input data-datepicker readonly id="time-input" type="text" name="form[appoint-time]" placeholder="First choose date" class="input">
+									<input data-datepicker readonly id="time-input" type="text" name="form[appoint-time]" placeholder="First choose date" class="input input-time">
 									<ul class="date-step__time-list inactive">
 
 										<li class="date-step__time-option">09.00 AM</li>
@@ -248,7 +245,7 @@
 
 							</div>
 							<!-- Doctors step -->
-							<div class="page-form__step doctors-step" style="display: none;">
+							<div class="page-form__step doctors-step">
 
 								<label class="doctors-step__option">
 
@@ -260,7 +257,7 @@
 										<h3 class="doctors-step__name">
 											Dr. Graham Shadwick
 										</h3>
-										<input autocomplete="off" type="radio" name="form[doctors]" class="doctors-step__input input" value="Graham-Shadwick">
+										<input checked autocomplete="off" type="radio" name="form[doctors]" class="doctors-step__input input" value="Graham-Shadwick">
 										<div class="doctors-step__input-fake input-fake _icon-ok-circle"></div>
 										<ul class="doctors-step__roles">
 											<li>Urology</li>
@@ -295,14 +292,14 @@
 
 							</div>
 							<!-- Details step -->
-							<div class="page-form__step details-step" style="display: none;">
+							<div class="page-form__step details-step">
 
 								<!-- Radio-btns -->
 								<div class="details-step__options">
 
 									<label class="details-step__option">
 
-										<input autocomplete="off" type="radio" name="form[details]" class="details-step__option-input input" value="exist-client">
+										<input checked autocomplete="off" type="radio" name="form[details]" class="details-step__option-input input" value="exist-client">
 										<div class="details-step__icon">
 											<svg viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_54_1037)">
@@ -350,7 +347,7 @@
 									<!-- Phone -->
 									<div class="details-step__phone">
 										<label for="phone-mask">Phone Number</label>
-										<input type="text" name="form[phone]" class="input" id="phone-mask" placeholder="Enter your phone number">
+										<input type="text" name="form[phone]" class="input input-phone" id="phone-mask" placeholder="Enter your phone number">
 									</div>
 
 								</div>
@@ -361,8 +358,8 @@
 						<!-- Buttons -->
 						<div class="page-form__btns">
 
-							<button class="button button--outline">Previous Step</button>
-							<button class="button button--green">Next Step</button>
+							<button class="page-form__prev button button--outline">Previous Step</button>
+							<button class="page-form__next button button--green">Next Step</button>
 
 						</div>
 
@@ -385,10 +382,10 @@
 						<h3 class="appoint-finish__title">Congratulations!</h3>
 						<!-- Text -->
 						<p class="appoint-finish__txt">
-							Your appointment with Dr. Steven Zervas is confirmed for August 25, 2024, at <span>10:00 AM</span>.
+							Your appointment with Dr. Steven Zervas is confirmed for <span class="appoint-finish__date">August 25, 2024</span>, at <span class="appoint-finish__time">10:00 AM</span>.
 						</p>
 						<!-- Button -->
-						<button class="appoint-finish__btn button button--green">Done</button>
+						<a href="home.html" class="appoint-finish__btn button button--green">Done</a>
 						<!-- Editting link -->
 						<a href="#" class="appoint-finish__edit">
 							Edit your appointment

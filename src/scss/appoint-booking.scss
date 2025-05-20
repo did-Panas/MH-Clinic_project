@@ -29,6 +29,7 @@
 		&::after {
 			content: "";
 			position: absolute;
+			z-index: 3;
 
 			aspect-ratio: 126 / 124;
 			@include adaptiveValue("width", 126, 60, 0, 1500, 992);
@@ -41,17 +42,20 @@
 
 		&::before {
 			@include adaptiveValue("top", 58, 0, 0, 1500, 992);
-			@include adaptiveValue("left", 29, -29, 0, 1500, 992);
+			@include adaptiveValue("left", 29, 0, 0, 1500, 992);
 		}
 
 		&::after {
-			@include adaptiveValue("bottom", 83, 105, 0, 1500, 992);
-			@include adaptiveValue("right", 29, -29, 0, 1500, 992);
+			@include adaptiveValue("bottom", 83, -50, 0, 1500, 992);
+			@include adaptiveValue("right", 29, 0, 0, 1500, 992);
 		}
 	}
 
 	// .page-form__top
 	&__top {
+		position: relative;
+		z-index: 5;
+
 		margin-bottom: toRem(30);
 	}
 
@@ -99,6 +103,9 @@
 
 	// .page-form__step
 	&__step {
+		&:not(.active) {
+			display: none;
+		}
 	}
 
 	// .page-form__btns
@@ -118,6 +125,17 @@
 		}
 	}
 
+	// .page-form__next
+	&__next {
+		margin-left: auto;
+
+		&.disabled {
+			cursor: none;
+
+			background-color: var(--grey);
+		}
+	}
+
 	// .page-form__finish
 	&__finish {
 		flex: 1;
@@ -130,14 +148,6 @@
 
 	@media (max-width: $mobileSmall) {
 		display: none;
-	}
-
-	// .indic-panel__progress
-	&__progress {
-	}
-
-	// .indic-panel__progr-success
-	&__progr-success {
 	}
 
 	// .indic-panel__steps
@@ -164,10 +174,6 @@
 			@include adaptiveValue("font-size", 15, 11, 0, 1200, 768);
 			font-weight: 600;
 		}
-
-		&.current + .indic-panel__progr-line::before {
-			width: 100%;
-		}
 	}
 
 	// .indic-panel__progr-line
@@ -193,7 +199,11 @@
 			background-color: var(--green);
 			border-radius: toRem(40);
 
-			transition: width 0.3s ease 0s;
+			transition: width 0.8s ease 0s;
+		}
+
+		&.animate::before {
+			width: 100%;
 		}
 	}
 
@@ -213,11 +223,15 @@
 			@include adaptiveValue("width", 20, 14, 0, 1200, 768);
 		}
 
-		.current & {
+		.complete & {
 			background-color: var(--green);
+
+			transition: background-color 0.5s ease 0.5s;
 
 			& path {
 				fill: #fff;
+
+				transition: fill 0.5s ease 0.5s;
 			}
 		}
 	}
@@ -747,7 +761,7 @@
 }
 
 .appoint-finish {
-	display: grid;
+	display: none;
 	justify-items: center;
 	align-content: center;
 	text-align: center;
