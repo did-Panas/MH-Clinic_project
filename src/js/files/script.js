@@ -326,7 +326,6 @@ function handleClickOutside(element, callback) {
 // ===== PAGE-FORM (APPOINT-BOOKING) ==============================================
 
 function initStepForm() {
-
 	const form = document.querySelector('.page-form__body');
 	const steps = document.querySelectorAll('.page-form__step');
 	const prevBtn = document.querySelector('.page-form__prev');
@@ -338,46 +337,64 @@ function initStepForm() {
 	const inputDate = document.querySelector('.input-date');
 	const inputTime = document.querySelector('.input-time');
 	const inputPhone = document.querySelector('.input-phone');
-	const israeliPhoneRegex = /^\+972[\s-]?(\d{1,2}[\s-]?\d{3}[\s-]?\d{4})$/;
-
 
 	form.addEventListener("submit", (e => e.preventDefault()));
 
 	let formStepIndex = 0;
 
-	prevBtn.addEventListener("click", (() => {
-
-		stepIndicators[formStepIndex].classList.remove('complete');
-		progressLines[formStepIndex - 1].classList.remove('animate');
+	prevBtn.addEventListener("click", () => {
+		if (formStepIndex < stepIndicators.length) {
+			stepIndicators[formStepIndex].classList.remove('complete');
+		}
+		if (formStepIndex > 0 && (formStepIndex - 1) < progressLines.length) {
+			progressLines[formStepIndex - 1].classList.remove('animate');
+		}
 
 		formStepIndex--;
 		updateFormSteps();
-	}));
+	});
 
-	nextBtn.addEventListener("click", (() => {
-
+	// ЄДИНИЙ ОБРОБНИК для nextBtn
+	nextBtn.addEventListener("click", () => {
 		if (formStepIndex < (steps.length - 1)) {
-
 			if (steps[formStepIndex].classList.contains('date-step')) {
 				if (inputDate.value.length > 0 && inputTime.value.length > 0) {
+					inputTime.classList.remove('_error');
+					inputDate.classList.remove('_error');
 					makeNextStep();
+				} else {
+					inputTime.classList.add('_error');
+					inputDate.classList.add('_error');
 				}
-			}
-			else {
+			} else {
 				makeNextStep();
 			}
-
 		}
 
-	}));
+		else if (formStepIndex === (steps.length - 1) && inputPhone.value.length > 0) {
+
+			if (formStepIndex < stepIndicators.length) {
+				stepIndicators[formStepIndex].classList.add('complete');
+			}
+
+			finishBlock.style.display = "grid";
+			if (steps[formStepIndex]) {
+				steps[formStepIndex].classList.remove("active");
+			}
+			btnsBlock.style.display = "none";
+
+		}
+	});
 
 	function updateFormSteps() {
-
-		steps.forEach((step => {
+		steps.forEach(step => {
 			step.classList.contains("active") && step.classList.remove("active");
-		}));
+		});
 
-		steps[formStepIndex].classList.add("active");
+		if (steps[formStepIndex]) {
+			steps[formStepIndex].classList.add("active");
+		}
+
 
 		if (formStepIndex === 0) {
 			prevBtn.style.display = "none";
@@ -387,42 +404,30 @@ function initStepForm() {
 
 		if (formStepIndex === steps.length - 1) {
 			nextBtn.innerHTML = "Submit";
-			nextBtn.addEventListener("click", (() => {
-				if (israeliPhoneRegex.test(inputPhone.value)) {
-					finishBlock.style.display = "grid";
-					steps[formStepIndex].classList.remove("active");
-					btnsBlock.style.display = "none";
-				}
-
-			}));
 		} else {
 			nextBtn.innerHTML = "Next";
-
 		}
 
 	}
 
 	function makeNextStep() {
-		stepIndicators[formStepIndex + 1].classList.add('complete');
-		progressLines[formStepIndex].classList.add('animate');
+		// Позначаємо поточний крок як завершений перед переходом
+		if (formStepIndex < stepIndicators.length) { // Перевірка меж
+			stepIndicators[formStepIndex].classList.add('complete');
+		}
+		if (formStepIndex < progressLines.length) { // Перевірка меж для progressLines
+			progressLines[formStepIndex].classList.add('animate');
+		}
 
 		formStepIndex++;
 		updateFormSteps();
 	}
 
-	function blockNextBtn() {
-		nextBtn.classList.add('disabled');
-		nextBtn.disabled = true;
-	}
-
-	function unblockNextBtn() {
-		nextBtn.classList.remove('disabled');
-		nextBtn.disabled = false;
-	}
-
 	updateFormSteps();
-
 }
 
-if (document.querySelector(".page-form__body")) initStepForm();
+if (document.querySelector(".page-form__body")) {
+	initStepForm();
+}
 
+// ================================================================================

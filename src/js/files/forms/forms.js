@@ -91,7 +91,7 @@ export let formValidate = {
 				this.addError(formRequiredItem);
 				error++;
 			} else this.removeError(formRequiredItem);
-		} else if ("uaphone" === formRequiredItem.dataset.required) {
+		} else if ("israelphone" === formRequiredItem.dataset.required) {
 			formRequiredItem.value = formRequiredItem.value.replace(" ", "");
 			if (this.phoneTest(formRequiredItem)) {
 				this.addError(formRequiredItem);
@@ -157,7 +157,7 @@ export let formValidate = {
 	},
 	phoneTest(formRequiredItem) {
 
-		return !/^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$/.test(formRequiredItem.value);
+		return !/^\+972[\s-]?(\d{1,2}[\s-]?\d{3}[\s-]?\d{4})$/.test(formRequiredItem.value);
 
 	}
 }
