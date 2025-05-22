@@ -40,7 +40,7 @@
 						<!-- Indicators Panel -->
 						<div class="page-form__indicators indic-panel">
 
-							<div class="indic-panel__steps">
+							<div role="progressbar" class="indic-panel__steps">
 
 								<div class="indic-panel__step complete">
 									<div class="indic-panel__icon">
@@ -131,7 +131,7 @@
 							<!-- Categories step -->
 							<div class="page-form__step categories-step">
 
-								<label class="categories-step__option">
+								<label tabindex="0" class="categories-step__option">
 									<div class="categories-step__icon">
 										<svg viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
@@ -148,7 +148,7 @@
 										A medical consultation offers tailored health advice, diagnosis, and treatment plans to address your specific needs.
 									</p>
 								</label>
-								<label class="categories-step__option">
+								<label tabindex="0" class="categories-step__option">
 
 									<div class="categories-step__icon">
 										<svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +173,7 @@
 							<!-- Treatments step -->
 							<div class="page-form__step treatments-step">
 
-								<label class="treatments-step__option">
+								<label tabindex="0" class="treatments-step__option">
 
 									<h3 class="treatments-step__title">
 										Treatment of erectile dysfunction with medications
@@ -185,7 +185,7 @@
 									</p>
 
 								</label>
-								<label class="treatments-step__option">
+								<label tabindex="0" class="treatments-step__option">
 
 									<h3 class="treatments-step__title">
 										Linear shock wave therapy for erectile dysfunction
@@ -198,7 +198,7 @@
 									</p>
 
 								</label>
-								<label class="treatments-step__option">
+								<label tabindex="0" class="treatments-step__option">
 
 									<h3 class="treatments-step__title">
 										Treatment of premature ejaculation
@@ -219,12 +219,12 @@
 								<!-- Date -->
 								<div class="date-step__date">
 									<label for="date-appoint">Date</label>
-									<input data-datepicker type="text" name="form[appoint-date]" placeholder="Select date" class="input input-date">
+									<input aria-required data-datepicker type="text" name="form[appoint-date]" placeholder="Select date" class="input input-date">
 								</div>
 								<!-- Time -->
 								<div class="date-step__time">
 									<label for="date-appoint">Time</label>
-									<input data-datepicker readonly id="time-input" type="text" name="form[appoint-time]" placeholder="First choose date" class="input input-time">
+									<input aria-required data-datepicker readonly id="time-input" type="text" name="form[appoint-time]" placeholder="First choose date" class="input input-time">
 									<ul class="date-step__time-list inactive">
 
 										<li class="date-step__time-option">09.00 AM</li>
@@ -247,7 +247,7 @@
 							<!-- Doctors step -->
 							<div class="page-form__step doctors-step">
 
-								<label class="doctors-step__option">
+								<label tabindex="0" class="doctors-step__option">
 
 									<div class="doctors-step__photo doctors-step__photo-ibg">
 										<img src="@img/appoint-booking/doctor-01@1x.jpg" srcset="@img/appoint-booking/doctor-01@2x.jpg 2x" alt="Dr. Graham Shadwick" loading="lazy">
@@ -268,7 +268,7 @@
 									</div>
 
 								</label>
-								<label class="doctors-step__option">
+								<label tabindex="0" class="doctors-step__option">
 
 									<div class="doctors-step__photo doctors-step__photo-ibg">
 										<img src="@img/appoint-booking/doctor-02@1x.jpg" srcset="@img/appoint-booking/doctor-02@2x.jpg 2x" alt="Dr. Graham Shadwick" loading="lazy">
@@ -297,7 +297,7 @@
 								<!-- Radio-btns -->
 								<div class="details-step__options">
 
-									<label class="details-step__option">
+									<label tabindex="0" class="details-step__option">
 
 										<input checked autocomplete="off" type="radio" name="form[details]" class="details-step__option-input input" value="exist-client">
 										<div class="details-step__icon">
@@ -319,7 +319,7 @@
 										</p>
 
 									</label>
-									<label class="details-step__option">
+									<label tabindex="0" class="details-step__option">
 
 										<input autocomplete="off" type="radio" name="form[details]" class="details-step__option-input details-step__option-input_new input" value="new-client">
 										<div class="details-step__icon">
@@ -347,8 +347,8 @@
 									<!-- Phone -->
 									<div class="details-step__phone">
 										<label for="phone-mask">Phone Number</label>
-										<input data-required="israelphone" data-validate data-error="incorrect phone number" type="text" name="form[phone]" class="input input-phone" id="phone-mask"
-											placeholder="Enter your phone number">
+										<input aria-required data-required="israelphone" data-validate data-error="incorrect phone number" type="text" name="form[phone]" class="input input-phone"
+											id="phone-mask" placeholder="Enter your phone number">
 									</div>
 
 								</div>

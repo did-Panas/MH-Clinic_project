@@ -354,7 +354,6 @@ function initStepForm() {
 		updateFormSteps();
 	});
 
-	// ЄДИНИЙ ОБРОБНИК для nextBtn
 	nextBtn.addEventListener("click", () => {
 		if (formStepIndex < (steps.length - 1)) {
 			if (steps[formStepIndex].classList.contains('date-step')) {

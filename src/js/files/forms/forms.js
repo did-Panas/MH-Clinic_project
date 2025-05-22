@@ -112,7 +112,7 @@ export let formValidate = {
 		let inputError = formRequiredItem.parentElement.querySelector('.form__error');
 		if (inputError) formRequiredItem.parentElement.removeChild(inputError);
 		if (formRequiredItem.dataset.error) {
-			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
+			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<div role="alert" class="form__error">${formRequiredItem.dataset.error}</div>`);
 		}
 	},
 	removeError(formRequiredItem) {
