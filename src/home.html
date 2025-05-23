@@ -53,10 +53,10 @@
 
 					</div>
 				</div>
-			</section>
-			<!-- Numbers -->
-			<section class="home-page__numbers">
-				@@include('html/_numbers.htm',{})
+				<!-- Numbers -->
+				<div class="home-page__numbers">
+					@@include('html/_numbers.htm',{})
+				</div>
 			</section>
 			<!-- Experiences - Section -->
 			<section class="home-page__experiences experiences">
@@ -72,7 +72,7 @@
 							<svg width="1404" height="631" viewBox="0 0 1404 631" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<defs>
 									<linearGradient id="paint0_linear_1_89" x1="2.41915" y1="528" x2="1367.79" y2="37.2646" gradientUnits="userSpaceOnUse">
-										<stop stop-color="#046F67" stop-opacity="0.42" />
+										<stop offset="0" stop-color="#046F67" stop-opacity="0.42" />
 										<stop offset="0.563099" stop-color="#046F67" stop-opacity="0.11" />
 										<stop offset="0.887261" stop-color="#046F67" stop-opacity="0.6" />
 									</linearGradient>
@@ -156,8 +156,8 @@
 								</div>
 								<!-- Navigation -->
 								<div class="slider-exp__nav">
-									<div class="slider-exp__btn-next _icon-arrow-next" aria-label="Move to Next Slide"></div>
-									<div class=" slider-exp__btn-prev _icon-arrow-next" aria-label="Move to Previous Slide"></div>
+									<div class="slider-exp__btn-next _icon-arrow-next" role="button" aria-label="Move to Next Slide"></div>
+									<div class=" slider-exp__btn-prev _icon-arrow-next" role="button" aria-label="Move to Previous Slide"></div>
 								</div>
 							</div>
 						</div>
@@ -499,7 +499,7 @@
 						<!-- Testimonials cards -->
 						<div data-watch data-watch-once data-watch-threshold='0.5' class="testimonials__body">
 
-							<article class="testim-card" itemscope itemtype="http://schema.org/Review">
+							<div class="testim-card" itemscope itemtype="http://schema.org/Review">
 								<div class="testim-card__photo testim-card__photo-ibg">
 									<img src="@img/testimonials/photo-01@1x.jpg" srcset="@img/testimonials/photo-01@2x.jpg 2x" alt="Client's Photo" loading="lazy">
 								</div>
@@ -510,8 +510,8 @@
 									</blockquote>
 									<cite class="testim-card__author" itemprop="author">- Henry B.</cite>
 								</div>
-							</article>
-							<article class="testim-card" itemscope itemtype="http://schema.org/Review">
+							</div>
+							<div class="testim-card" itemscope itemtype="http://schema.org/Review">
 								<div class="testim-card__photo testim-card__photo-ibg">
 									<img src="@img/testimonials/photo-01@1x.jpg" srcset="@img/testimonials/photo-01@2x.jpg 2x" alt="Client's Photo" loading="lazy">
 								</div>
@@ -522,8 +522,8 @@
 									</blockquote>
 									<cite class="testim-card__author" itemprop="author">- Henry B.</cite>
 								</div>
-							</article>
-							<article class="testim-card" itemscope itemtype="http://schema.org/Review">
+							</div>
+							<div class="testim-card" itemscope itemtype="http://schema.org/Review">
 								<div class="testim-card__photo testim-card__photo-ibg">
 									<img src="@img/testimonials/photo-01@1x.jpg" srcset="@img/testimonials/photo-01@2x.jpg 2x" alt="Client's Photo" loading="lazy">
 								</div>
@@ -534,8 +534,8 @@
 									</blockquote>
 									<cite class="testim-card__author" itemprop="author">- Henry B.</cite>
 								</div>
-							</article>
-							<article class="testim-card" itemscope itemtype="http://schema.org/Review">
+							</div>
+							<div class="testim-card" itemscope itemtype="http://schema.org/Review">
 								<div class="testim-card__photo testim-card__photo-ibg">
 									<img src="@img/testimonials/photo-01@1x.jpg" srcset="@img/testimonials/photo-01@2x.jpg 2x" alt="Client's Photo" loading="lazy">
 								</div>
@@ -546,7 +546,7 @@
 									</blockquote>
 									<cite class="testim-card__author" itemprop="author">- Henry B.</cite>
 								</div>
-							</article>
+							</div>
 
 						</div>
 
@@ -591,8 +591,8 @@
 
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>How do I know that I have erectile dysfunction?</p>
-										<div class="plus-icon"></div>
+										<span>How do I know that I have erectile dysfunction?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam, totam iste ipsa hic voluptatum
@@ -601,8 +601,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>What is the cost of treatment?</p>
-										<div class="plus-icon"></div>
+										<span>What is the cost of treatment?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam
@@ -610,8 +610,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>How is erectile dysfunction treated?</p>
-										<div class="plus-icon"></div>
+										<span>How is erectile dysfunction treated?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam, totam iste ipsa hic voluptatum
@@ -619,8 +619,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>How do I know the best treatment for my condition?</p>
-										<div class="plus-icon"></div>
+										<span>How do I know the best treatment for my condition?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam
@@ -637,8 +637,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>Is linear shock wave treatment suitable for my condition?</p>
-										<div class="plus-icon"></div>
+										<span>Is linear shock wave treatment suitable for my condition?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam, totam iste ipsa hic voluptatum
@@ -646,8 +646,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>Is the result of the treatment permanent?</p>
-										<div class="plus-icon"></div>
+										<span>Is the result of the treatment permanent?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam, totam iste ipsa hic
@@ -656,8 +656,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>Is there hope for treating my advanced case of erectile dysfunction?</p>
-										<div class="plus-icon"></div>
+										<span>Is there hope for treating my advanced case of erectile dysfunction?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam, totam iste ipsa hic voluptatum
@@ -665,8 +665,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>I am a diabetic patient, can my condition be treated?</p>
-										<div class="plus-icon"></div>
+										<span>I am a diabetic patient, can my condition be treated?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci
@@ -674,8 +674,8 @@
 								</details>
 								<details class="faq-spollers__item">
 									<summary data-spoller-close class="faq-spollers__title">
-										<p>What guarantees me a result from the treatment?</p>
-										<div class="plus-icon"></div>
+										<span>What guarantees me a result from the treatment?</span>
+										<span class="plus-icon"></span>
 									</summary>
 									<div class="faq-spollers__body">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis adipisci autem eveniet soluta rem explicabo accusantium eum numquam, totam iste ipsa hic voluptatum

@@ -127,6 +127,8 @@
 // ===== Blogs SLider - Section ===============================
 
 .slider-blogs {
+	@include adaptiveValue("margin-bottom", 103, 85, 0, 1200, 768);
+
 	// .slider-blogs__container
 	&__container {
 	}

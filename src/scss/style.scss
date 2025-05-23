@@ -184,7 +184,6 @@ button:focus {
 .home-page {
 	// .home-page__hero
 	&__hero {
-		margin-bottom: toRem(50);
 	}
 
 	// .home-page__numbers
@@ -238,7 +237,6 @@ button:focus {
 
 	// .page-about-us__info
 	&__info {
-		margin-bottom: toRem(80);
 	}
 
 	// .page-about-us__numbers
@@ -275,11 +273,6 @@ button:focus {
 
 	// .page-blogs__recently-posted
 	&__recently-posted {
-	}
-
-	// .page-blogs__slider
-	&__slider {
-		@include adaptiveValue("margin-bottom", 103, 85, 0, 1200, 768);
 	}
 
 	// .page-blogs__our-blogs
@@ -332,7 +325,6 @@ button:focus {
 .page-faq {
 	// .page-faq__hero
 	&__hero {
-		margin-bottom: toRem(71);
 	}
 
 	// .page-faq__content
