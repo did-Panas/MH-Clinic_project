@@ -534,6 +534,8 @@
 
 	// .doctors-step__option
 	&__option {
+		position: relative;
+
 		flex: 0 1 toRem(415);
 		display: flex;
 		gap: toRem(10);
@@ -564,6 +566,11 @@
 
 		@media (max-width: $tablet) {
 			border-width: toRem(1);
+		}
+
+		& label {
+			position: absolute;
+			inset: 0;
 		}
 	}
 
